@@ -5,21 +5,27 @@
             <a href="{% link index.html %}"><img src={{ "/icon/icon.svg" | relative_url }}>
                 {{ site.class_number }}</a>
         </div>
-        <!-- <div class="sidebar-heading">Pages</div> -->
+
         <div class="list-group list-group-flush">
             {% for item in site.pages %}
+            <!-- Look for specific front-matter tag -->
+            {% if item.link %}
+            <a href="{{item.link }}" class="list-group-item list-group-item-action bg-light sidebar-item" {% if
+                item.new_window %}target="_blank" {% endif %}>
+                {% if item.icon %}
+                <i class="{{ item.icon }}"></i>
+                {% endif %}
+                {{ item.title }}
+            </a>
+            {% else %}
             <a href="{% link {{item.path }} %}" class="list-group-item list-group-item-action bg-light sidebar-item">
                 {% if item.icon %}
                 <i class="{{ item.icon }}"></i>
                 {% endif %}
                 {{ item.title }}
             </a>
+            {% endif %}
             {% endfor %}
-            <a href="https://learningsuite.byu.edu/.qD2F/cid-B84_MqETGWke/calendar"
-                class="list-group-item list-group-item-action bg-light sidebar-item" target="_blank">
-                <i class="far fa-calendar"></i>
-                Schedule
-            </a>
         </div>
 
         <div class="sidebar-heading">Labs</div>
