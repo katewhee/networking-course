@@ -5,7 +5,8 @@
 @charset "utf-8";
 
 // Our variables
-$base-font-family: "neue-haas-unica", "Helvetica Neue", Helvetica, Arial, sans-serif;
+$base-font-family: {{ site.fonts.base}};
+$header-font-family: {{ site.fonts.header }};
 $base-font-size: 16px;
 $base-font-weight: 300;
 $small-font-size: $base-font-size * 0.875;

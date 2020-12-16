@@ -42,6 +42,13 @@ colors:
   text_selection_color: "#ffde16"
   sidebar_hover_color: "#faa220"
 
+# Set the fonts
+fonts:
+  base: "'neue-haas-unica', 'Helvetica Neue', Helvetica, Arial, sans-serif"
+  header: "omnium, sans-serif"
+  # If you want a more traditional font, consider using this instead:
+  # header: "'Ubuntu', sans-serif"
+
 collections:
   labs:
     output: true
