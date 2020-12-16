@@ -13,13 +13,13 @@ $base-line-height: 1.5;
 
 $spacing-unit: 30px;
 
-$text-color: #111;
-$background-color: #fdfdfd;
-$brand-color: #ed3d96;
-$secondary-color: #c3e6ef;
+$text-color: {{ site.colors.text_color }};
+$background-color: {{ site.colors.background_color }};
+$brand-color: {{ site.colors.brand_color }};
+$secondary-color: {{ site.colors.secondary_color }};
 
-$selection-color: #ffde16;
-$sidebar-hover-color: #faa220;
+$selection-color: {{ site.colors.text_selection_color }};
+$sidebar-hover-color: {{ site.colors.sidebar_hover_color }};
 
 $grey-color: #424242;
 $grey-color-light: lighten($grey-color, 40%);

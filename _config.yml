@@ -28,9 +28,19 @@ markdown: kramdown
 plugins:
   - jekyll-feed
 
-github:
-  url: https://github.com/NET-BYU/networking-course
-  branch: master
+# Turn on the button to allow students to submit PRs to change a page
+suggest_edits:
+  enable: true
+  link: https://github.com/NET-BYU/networking-course/blob/master
+
+# Set the color theme of the page
+colors:
+  text_color: "#111"
+  background_color: "#fdfdfd"
+  brand_color: "#ed3d96"
+  secondary_color: "#c3e6ef"
+  text_selection_color: "#ffde16"
+  sidebar_hover_color: "#faa220"
 
 collections:
   labs:
@@ -46,10 +56,11 @@ collections:
     permalink: /:name/
     order:
       - overview.md
-      - goals.md
       - resources.md
       - coding_standard.md
       - lab_setup.md
+      - ta_hours.md
+      - schedule.md
 
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list
