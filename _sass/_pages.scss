@@ -30,8 +30,10 @@ h3 {
     margin-left: 0;
 }
 
-ul li {
-    margin-bottom: 15px;
+.page-content {
+    ul li {
+        margin-bottom: 15px;
+    }
 }
 
 .btn-brand {
@@ -87,7 +89,7 @@ ul li {
     li {
         display: block;
         font-size: 14px;
-        margin-bottom: 0px;
+        margin-bottom: 0px !important;
     }
 
     a {
