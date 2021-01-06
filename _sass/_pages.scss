@@ -173,26 +173,12 @@ table {
 }
 
 .home-image {
-    // background-image: url("../images/background.svg");
-    background-repeat: no-repeat;
+    background: url(../images/background.svg) no-repeat center center fixed;
+    /* background-image: url("../images/background.svg"); */
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
     background-size: cover;
-    background-position: 20% 0%;
-    background-image: url("../images/background.svg");
-}
-
-@include media-query($on-md) {
-    .home-image {
-        // background-position: 0% -40px;
-        background-image: url("../images/background-medium.svg");
-        padding-bottom: 450px;
-    }
-}
-
-@include media-query($on-sm) {
-    .home-image {
-        background-image: url("../images/background-small.svg");
-        padding-bottom: 250px;
-    }
 }
 
 .home-icon {
