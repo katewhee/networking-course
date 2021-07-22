@@ -87,7 +87,7 @@ Your program will take the same input file as the previous lab. So from the comm
 
 ### Technical Debt
 
-At this point in the labs, you might have incurred some [technical debt](https://en.wikipedia.org/wiki/Technical_debt){:target="_blank"}. Since this lab is on the lighter side, this is your chance to pay it back. Take some time to understand how all of the different parts come together. Having a clear understanding of this will be helpful in future labs. Take time to make sure your code is clean and understandable. Run [Valgrind](https://www.valgrind.org){:target="_blank"}.
+At this point in the labs, you might have incurred some [technical debt](https://en.wikipedia.org/wiki/Technical_debt){:target="_blank"}. Since this lab is on the lighter side, this is your chance to pay it back. Take some time to understand how all of the different parts come together. Having a clear understanding of this will be helpful in future labs. Take time to make sure your code is clean and understandable. Run [Valgrind](https://www.valgrind.org){:target="_blank"}... it's a requirement.
 
 
 ## Objectives
@@ -115,7 +115,10 @@ At this point in the labs, you might have incurred some [technical debt](https:/
 
 - Use the binary version of the protocol.
 
-- Ensure that Valgrind reports no errors.
+- Ensure that Valgrind reports no errors. Run Valgrind with the following options:
+```
+valgrind --tool=memcheck --leak-check=yes --show-reachable=yes --num-callers=20 --track-fds=yes bin/tcp_client ...
+```
 
 
 ## Testing
