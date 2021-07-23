@@ -5,9 +5,11 @@ toc: true
 icon: fas fa-wrench
 ---
 
-## Environment
+## Development Environment
 
-The labs will be tested and graded on Linux, so you need to make sure that it works in that environment. However, I completed all of the labs on macOS and did not see major differences. If you would like to use Windows to develop your labs, don't. Sorry, the socket programming is different on Windows so it would require a lot of effort to have it support Windows and Linux. I can't vouch for the Linux Subsystem, but you are welcome to try. Just know that all grading will be done using pure Linux (or a docker container running Linux). If you don't have access to Linux or macOS on your machine, you can SSH into a CAEDM computer and develop from there, or install a VM on your machine. 
+The labs will be tested and graded on Linux, so you need to make sure that it works in that environment. However, I completed all of the labs on macOS and did not see major differences. If you would like to use Windows to develop your labs, don't. Sorry, the socket programming is different on Windows so it would require a lot of effort to have it support Windows and Linux. I can't vouch for the Linux Subsystem, but you are welcome to try. Students in the past have had success using it. Just know that all grading will be done using pure Linux. If you don't have access to Linux or macOS on your machine, you can SSH into a Embedded Lab computer and develop from there, or install a VM on your machine. 
+
+To SSH into an Embedded Lab computer, use the following host name: `embed-<N>.ee.byu.edu`, replacing <N> with the computer number. These computers should have all the necessary libraries and executables to do the labs.
 
 ## Visual Studio Code
 
@@ -26,6 +28,14 @@ Here is an example of my configuration:
 I even have it format my code on save.
 
 ![Setting to format on save]({% link assets/format-on-save.png %}){:width="80%"}
+
+If you are working on the labs remotely (SSHing into a computer), I *strongly* recommend you figure out how to use [VS Code's remote development](https://code.visualstudio.com/docs/remote/ssh){:target="_blank"}. It is a very powerful way of developing on a remote machine while making it look like everything is local. Spending some time now will save you a lot of time later... I promise.
+
+## Terminal
+
+A theme in this class will be setting up your environment so that it matches your preferences, making your life easier. This is true with your terminal app—set it up so that it brings you joy (as much as a terminal app can) and works with your habits. 
+
+My highly opinionated set up involves using [zsh](https://en.wikipedia.org/wiki/Z_shell), [Oh My Zsh](https://github.com/ohmyzsh/ohmyzsh), and [Powerlevel10k](https://github.com/romkatv/powerlevel10k). If you would like read more about my setup, you can go [here](https://byunetlab.notion.site/Phil-s-Computer-Setup-0722e33e22e74460aa53f58d5f2babb8).
 
 ## Git Repositories
 
