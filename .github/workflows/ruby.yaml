@@ -12,15 +12,16 @@ jobs:
     steps:
       - uses: actions/checkout@v2
 
-      - name: Setup Ruby, JRuby and TruffleRuby
+      - name: Setup Ruby environment
         uses: ruby/setup-ruby@v1.81.0
+        with:
+          ruby-version: 2.7
+          bundler-cache: true
 
       - name: Building website
-        run: |
-          bundle install
-          bundle exec jekyll build
+        run: bundle exec jekyll build
 
-      - name: copy file via ssh password
+      - name: Copy file via ssh password
         uses: appleboy/scp-action@master
         with:
           host: ${{ secrets.HOST }}
