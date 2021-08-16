@@ -21,6 +21,8 @@ jobs:
       - name: Building website
         run: bundle exec jekyll build
 
+      - run: mv _site 426
+
       - name: Copy file via ssh password
         uses: appleboy/scp-action@master
         with:
@@ -28,5 +30,5 @@ jobs:
           username: ${{ secrets.USERNAME }}
           password: ${{ secrets.PASSWORD }}
           port: ${{ secrets.PORT }}
-          source: "_site/*"
-          target: "groups/networking/www/426/"
+          source: "426"
+          target: "groups/networking/www/"
