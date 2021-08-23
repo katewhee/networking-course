@@ -1,6 +1,4 @@
 ---
-layout: lab
-toc: true
 title: MQTT Client
 number: 7
 repo: https://github.com/byu-ecen493r-classroom/lab7.git

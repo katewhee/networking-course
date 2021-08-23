@@ -1,6 +1,4 @@
 ---
-layout: lab
-toc: true
 title: TCP Client v2
 number: 2
 repo: https://github.com/byu-ecen493r-classroom/lab2.git

@@ -1,6 +1,4 @@
 ---
-layout: lab
-toc: true
 title: Concurrent HTTP Server
 number: 6
 repo: https://github.com/byu-ecen493r-classroom/lab6.git

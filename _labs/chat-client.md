@@ -1,8 +1,6 @@
 ---
-layout: lab
-toc: true
 title: Chat Client
-number: 8
+number: 9
 repo: https://github.com/byu-ecen493r-classroom/lab8.git
 ---
 

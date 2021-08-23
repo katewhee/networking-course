@@ -1,6 +1,4 @@
 ---
-layout: lab
-toc: true
 title: TCP Client v3
 number: 3
 repo: https://github.com/byu-ecen493r-classroom/lab3.git

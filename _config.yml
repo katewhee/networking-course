@@ -52,7 +52,7 @@ fonts:
 collections:
   labs:
     output: true
-    permalink: /:collection/:name/
+    permalink: /:collection/:title/
     sort_by: number
   homeworks:
     output: true
@@ -68,6 +68,14 @@ collections:
       - lab_setup.md
       - ta_hours.md
       - schedule.md
+
+defaults:
+  - scope:
+      path: ""
+      type: "labs"
+    values:
+      layout: "lab"
+      toc: true
 
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list
