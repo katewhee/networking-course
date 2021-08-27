@@ -9,6 +9,6 @@ problems:
     - P17
     - P27
 wireshark_labs:
-    - "[Ethernet and ARP](http://www-net.cs.umass.edu/wireshark-labs/Wireshark_Ethernet_ARP_v8.0.pdf){:target=\"_blank\"}"
+    - <a target="_blank" href="http://www-net.cs.umass.edu/wireshark-labs/Wireshark_Ethernet_ARP_v8.0.pdf">Ethernet and ARP</a>
 ---
 

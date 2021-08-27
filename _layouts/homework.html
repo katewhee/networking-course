@@ -7,31 +7,18 @@ layout: default
     </h1>
 
     <div class="page-content">
-        <div class="card-deck mb-3 text-center">
-            <div class="card mb-4 shadow-sm">
-                <div class="card-header">
-                    <h4 class="my-0 font-weight-normal">Chapter {{ page.chapter }} Problems</h4>
-                </div>
-                <div class="card-body">
-                    <ul class="list-unstyled mt-3 mb-4">
-                        {% for problem in page.problems %}
-                        <li>{{ problem }}</li>
-                        {% endfor %}
-                    </ul>
-                </div>
-            </div>
-            <div class="card mb-4 shadow-sm">
-                <div class="card-header">
-                    <h4 class="my-0 font-weight-normal">Wireshark Lab</h4>
-                </div>
-                <div class="card-body">
-                    <ul class="list-unstyled mt-3 mb-4">
-                        {% for lab in page.wireshark_labs %}
-                        <li>{{ lab | markdownify }}</li>
-                        {% endfor %}
-                    </ul>
-                </div>
-            </div>
-        </div>
+        <h3>Wireshark Lab</h3>
+        <ol>
+            {% for lab in page.wireshark_labs %}
+            <li>{{ lab }}</li>
+            {% endfor %}
+        </ol>
+
+        <h3>Book Problems (Chapter {{ page.chapter }})</h3>
+        <ol start="{{ page.wireshark_labs | size | plus: 1 }}">
+            {% for problem in page.problems %}
+            <li>{{ problem }}</li>
+            {% endfor %}
+        </ol>
     </div>
 </article>

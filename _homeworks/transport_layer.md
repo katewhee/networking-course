@@ -10,6 +10,6 @@ problems:
     - P40
     - P41
 wireshark_labs:
-    - "[TCP](http://www-net.cs.umass.edu/wireshark-labs/Wireshark_TCP_v8.0.pdf){:target=\"_blank\"}"
-    - "[UDP](http://www-net.cs.umass.edu/wireshark-labs/Wireshark_UDP_v8.0.pdf){:target=\"_blank\"}"
+    - <a target="_blank" href="http://www-net.cs.umass.edu/wireshark-labs/Wireshark_TCP_v8.0.pdf">TCP</a>
+    - <a target="_blank" href="http://www-net.cs.umass.edu/wireshark-labs/Wireshark_UDP_v8.0.pdf">UDP</a>
 ---

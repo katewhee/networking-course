@@ -9,6 +9,6 @@ problems:
     - P17
     - P18
 wireshark_labs:
-    - "[IP](http://www-net.cs.umass.edu/wireshark-labs/Wireshark_IP_v8.0.pdf){:target=\"_blank\"}"
+    - <a target="_blank" href="http://www-net.cs.umass.edu/wireshark-labs/Wireshark_IP_v8.0.pdf">IP</a>
 ---
 
