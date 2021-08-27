@@ -11,7 +11,7 @@ This course is made up of three major components:
 
 - **Labs**. Labs will generally be due every week on Fridays. Occasionally, you get an extra week for a lab when you are implementing a new concept.
 
-- **Homeworks**. Homeworks are due one week after the unit's material is covered. They will cover information from the lecture and book. They will typically consist of problems from the textbook and a [Wireshark lab](https://gaia.cs.umass.edu/kurose_ross/wireshark.htm){:target="_blank"}, where you get hands-on experience with protocols using [Wireshark](https://www.wireshark.org){:target="_blank"}.
+- **Homeworks**. Homeworks are due one week after the unit's material is covered. They will cover information from the lecture and book. They will typically consist of problems from the textbook and a [Wireshark lab](https://gaia.cs.umass.edu/kurose_ross/wireshark.htm){:target="_blank"}, where you get hands-on experience with protocols using [Wireshark](https://www.wireshark.org){:target="_blank"}. The Wireshark labs can be pretty tedious, so rather than submitting endless screenshots and meaningless packet information, you will be doing the Wireshark labs based on the honor system. Do the Wireshark lab and indicate that you have done them on your homework—that's the only proof I need.
 
 - **Exams**. There are two midterms and a comprehensive final.
 
@@ -37,7 +37,7 @@ There are nine labs, so each lab is worth 4.4% of your grade. There are five hom
 All communication will be done over Slack. Slack is intended to be used for announcements, questions, and facilitate student communication. If you have a question, ask it on Slack so that everyone can benefit from seeing the question and answer. 
 
 ## Attendance and Participation
-This is a senior-level class, and I expect senior-level participation. I expect all students to watch every lecture and be engaged in the lecture. Asking and answering questions in class is essential. When you are in a lecture, I expect your attention, so students should not be on their phones or doing non-class related things on laptops.
+This is a senior-level class, and I expect senior-level participation. I expect all students to attend every lecture and be engaged in the lecture. Asking and answering questions in class is essential. When you are in a lecture, I expect your attention, so students should not be on their phones or doing non-class related things on laptops.
 
 ## Late Policy
 Don't be late. With all programming, but especially with networking, bugs pop up, and things take longer than you hope, so plan ahead on the labs. 20% of the grade will be subtracted for each day late, not including weekends.
