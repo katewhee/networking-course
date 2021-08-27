@@ -1,7 +1,7 @@
 ---
 title: TCP Client v1
 number: 1
-repo: https://github.com/byu-ecen493r-classroom/lab1.git
+repo: https://github.com/byu-ecen426-classroom/tcp_client_v1.git
 ---
 
 

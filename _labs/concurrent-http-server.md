@@ -1,7 +1,7 @@
 ---
 title: Concurrent HTTP Server
 number: 6
-repo: https://github.com/byu-ecen493r-classroom/lab6.git
+repo: https://github.com/byu-ecen426-classroom/concurrent_http_server.git
 ---
 
 > Controlling complexity is the essence of computer programming.

@@ -1,7 +1,7 @@
 ---
 title: TCP Server
 number: 4
-repo: https://github.com/byu-ecen493r-classroom/lab4.git
+repo: https://github.com/byu-ecen426-classroom/tcp_server.git
 ---
 
 > First, solve the problem. Then, write the code.

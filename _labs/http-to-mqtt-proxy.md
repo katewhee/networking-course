@@ -2,7 +2,7 @@
 toc: false
 title: HTTP to MQTT Proxy
 number: 8
-repo: https://github.com/byu-ecen493r-classroom/lab7.git
+repo: https://github.com/byu-ecen426-classroom/http_to_mqtt_proxy.git
 ---
 <style>
 .dunder h2 {

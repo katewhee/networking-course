@@ -1,7 +1,7 @@
 ---
 title: Chat Client
 number: 9
-repo: https://github.com/byu-ecen493r-classroom/lab8.git
+repo: https://github.com/byu-ecen426-classroom/chat_client.git
 ---
 
 > Consistency underlies all principles of quality.

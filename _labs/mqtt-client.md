@@ -1,7 +1,7 @@
 ---
 title: MQTT Client
 number: 7
-repo: https://github.com/byu-ecen493r-classroom/lab7.git
+repo: https://github.com/byu-ecen426-classroom/mqtt_client.git
 ---
 
 > Programs must be written for people to read, and only incidentally for machines to execute.
