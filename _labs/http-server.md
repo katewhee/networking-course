@@ -27,13 +27,13 @@ For your server, you can assume that all requests and responses will be in `HTTP
 
 ### Command-line Interface (CLI)
 
-Only one modification needs to be made to the CLI of your server from the previous lab. You need to add an option that allows you to pass in the folder that your server will look for files. What I mean by this is when someone requests `http://localhost:8080/test.jpg`, where should your server look for `test.jpg`? It could look relative to the root directory, but that is a big security problem because then the person requesting has access to your whole hard drive. Instead, an option will be provided that makes all requests relative to that folder. For example, you could run the server,
+Only two modifications need to be made to the CLI of your server from the previous lab. First, you need to add an option that allows you to pass in the folder that your server will look for files. What I mean by this is when someone requests `http://localhost:8080/test.jpg`, where should your server look for `test.jpg`? It could look relative to the root directory, but that is a big security problem because then the person requesting has access to your whole hard drive. Instead, an option will be provided that makes all requests relative to that folder. For example, you could run the server,
 
 ```
 bin/http_server -f ./www
 ```
 
-Then all requests would be relative to the `www` folder. The previous request would try to access a file at `www/test.jpg`.
+Then all requests would be relative to the `www` folder. The previous request would try to access a file at `www/test.jpg`. The second change you need to make is adding a `--delay` flag. This will purposely delay the handling of a HTTP request for 5 seconds. This flag is purely to help with testing your code and has no real-world benefit. 
 
 Here is a demonstration of the server:
 
@@ -55,14 +55,15 @@ Here is a demonstration of the server:
 
 - The name of your program must be named `http_server`.
 
-- `http_server` accepts no arguments and four options:
+- `http_server` accepts no arguments and five options:
 
 ```
-Usage: http_server [--help] [-v] [-p PORT] [-f FOLDER]
+Usage: http_server [--help] [-v] [-d] [-p PORT] [-f FOLDER]
 
 Options:
   --help
   -v, --verbose
+  -d, --delay
   --port PORT, -p PORT
   --folder FOLDER, -f FOLDER
 ```
