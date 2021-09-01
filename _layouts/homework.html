@@ -1,24 +1,68 @@
 ---
 layout: default
 ---
+<style></style>
 <article class="page">
     <h1 class="page-title" id="page-title">
         {{ page.title }} Homework
     </h1>
 
     <div class="page-content">
-        <h3>Wireshark Lab</h3>
+        {% if page.problems %}
         <ol>
-            {% for lab in page.wireshark_labs %}
-            <li>{{ lab }}</li>
-            {% endfor %}
-        </ol>
-
-        <h3>Book Problems (Chapter {{ page.chapter }})</h3>
-        <ol start="{{ page.wireshark_labs | size | plus: 1 }}">
             {% for problem in page.problems %}
-            <li>{{ problem }}</li>
+
+            {% if problem.image %}
+            <img src="{{ problem.image }}" />
+            {% endif %}
+
+            <li>{{ problem.question | markdownify }}</li>
+
+            {% if problem.parts %}
+            <ol type="a">
+                {% for part in problem.parts %}
+                <li>{{ part }}</li>
+                {% endfor %}
+            </ol>
+            {% endif %}
+
+            <hr style="border: 0; border-bottom: 1px dotted #ccc; margin: 30px 0px">
+
             {% endfor %}
         </ol>
+        {% else %}
+        <style>
+            .dunder h2 {
+                font-family: arial;
+                font-weight: bold;
+                color: black;
+            }
+
+            .dunder h3 {
+                font-family: arial;
+                font-weight: bold;
+                color: black;
+            }
+
+            .dunder h3 span:nth-of-type(even) {
+                color: green;
+            }
+
+            .dunder h3 span:nth-of-type(odd) {
+                color: red;
+            }
+        </style>
+
+        <div class="dunder text-center">
+            <h2>Under Construction</h2>
+
+            <img src="{% link assets/under-construction.gif %}" alt="dunder mifflin logo">
+
+            <h3>Coming
+                <span>C</span><span>h</span><span>r</span><span>i</span><span>s</span><span>t</span><span>m</span><span>a</span><span>s</span>
+                <span>2</span><span>0</span><span>0</span><span>2</span><span>!</span></h3>
+
+        </div>
+        {% endif %}
     </div>
 </article>
