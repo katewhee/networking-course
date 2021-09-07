@@ -7,7 +7,7 @@ repo: https://github.com/byu-ecen426-classroom/tcp_client_v1.git
 
 > Programming isn't about what you know; it's about what you can figure out.
 > 
-> Chris Pine
+> [Chris Pine]({% link assets/chris-pine.png %}){:target="_blank"}
 
 ## GitHub Classroom
 

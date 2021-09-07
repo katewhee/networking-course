@@ -6,7 +6,7 @@ repo: https://github.com/byu-ecen426-classroom/http_server.git
 
 > Computer Science is no more about computers than astronomy is about telescopes.
 > 
-> Edsger W. Dijkstra
+> [Edsger W. Dijkstra](https://en.wikipedia.org/wiki/Edsger_W._Dijkstra){:target="_blank"}
 
 ## GitHub Classroom
 

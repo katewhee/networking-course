@@ -6,7 +6,7 @@ repo: https://github.com/byu-ecen426-classroom/concurrent_http_server.git
 
 > Controlling complexity is the essence of computer programming.
 > 
-> Brian Kernighan
+> [Brian Kernighan](https://en.wikipedia.org/wiki/Brian_Kernighan){:target="_blank"}
 
 ## GitHub Classroom
 

@@ -6,7 +6,7 @@ repo: https://github.com/byu-ecen426-classroom/chat_client.git
 
 > Consistency underlies all principles of quality.
 > 
-> Frederick P. Brooks, Jr.
+> [Frederick P. Brooks, Jr.](https://en.wikipedia.org/wiki/Fred_Brooks){:target="_blank"}
 
 ## GitHub Classroom
 

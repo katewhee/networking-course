@@ -6,7 +6,7 @@ repo: https://github.com/byu-ecen426-classroom/tcp_client_v2.git
 
 > Any fool can write code that a computer can understand. Good programmers write code that humans can understand.
 > 
-> Martin Fowler
+> [Martin Fowler](https://en.wikipedia.org/wiki/Martin_Fowler_(software_engineer)){:target="_blank"}
 
 ## GitHub Classroom
 

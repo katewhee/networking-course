@@ -6,7 +6,7 @@ repo: https://github.com/byu-ecen426-classroom/tcp_client_v3.git
 
 > If debugging is the process of removing software bugs, then programming must be the process of putting them in. 
 > 
-> Edsger Dijkstra
+> [Edsger Dijkstra](https://en.wikipedia.org/wiki/Edsger_W._Dijkstra){:target="_blank"}
 
 ## GitHub Classroom
 

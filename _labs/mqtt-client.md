@@ -6,7 +6,7 @@ repo: https://github.com/byu-ecen426-classroom/mqtt_client.git
 
 > Programs must be written for people to read, and only incidentally for machines to execute.
 > 
-> Harold Abelson
+> [Harold Abelson](https://en.wikipedia.org/wiki/Hal_Abelson){:target="_blank"}
 
 ## GitHub Classroom
 
