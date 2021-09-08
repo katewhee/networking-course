@@ -89,7 +89,7 @@ Options:
 
 - The default `HOST` must be "localhost", and the default `PORT` must be 8080.
 
-- Your program is allowed only to print one thing to `stdout`: the text returned from the server.
+- Your program is only allowed to print the text returned from the server to `stdout`. Everything else should be printed to `stderr`.
 
 - When the verbose flag is set, you must print debugging messages to `stderr`. These debugging messages must be *meaningful* and not garbage data. They should be helpful to anyone that is trying to debug your program.
 
