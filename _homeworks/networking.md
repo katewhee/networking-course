@@ -20,7 +20,7 @@ problems:
       - What is the transmission delay?
       - What is the maximum number of packets per second that can be transmitted by this link?
   
-  - question: What is the **transmission delay** and **propagation delay** for links 1, 2, and 3? What is the total end-to-end delay?
+  - question: Assume the length of a packet is 4000 bits. The speed of light propagation delay on each link is 3x10<sup>8</sup> m/sec. What is the **transmission delay** and **propagation delay** for links 1, 2, and 3? What is the total end-to-end delay?
     image: /426/assets/transmission_delay.png
 
   - question: 
