@@ -95,7 +95,7 @@ Here is a demonstration of the chat client:
 
 ## Requirements
 
-- The name of your program must be named `chat`. If you choose a non-complied language, you must provide a bash script called `chat` that runs your program. You can use [`$@`](https://stackoverflow.com/a/3816747){:target="_blank"} to pass all of the arguments from the bash script to your program.
+- The name of your program must be named `chat`. If you choose a non-complied language, you must provide a bash script called `chat` that runs your program. You can use [`"$@"`](https://stackoverflow.com/a/3816747){:target="_blank"} to pass all of the arguments from the bash script to your program.
 
 - Your program must have the usage pattern provided above and parse all of the options and arguments correctly.
 
