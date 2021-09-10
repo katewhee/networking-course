@@ -7,10 +7,7 @@ icon: fas fa-book
 
 ### Textbook
 
-The class has one required textbook:
-
-[Computer Networking: A Top-Down Approach, 7th Edition by Kurose and Ross](https://amzn.com/0133594149){:target="_blank"}
-
+The class has one required textbook: ***Computer Networking: A Top-Down Approach, 7th Edition by Kurose and Ross***.
 
 The book comes with some online tools to help you understand the material:
 
