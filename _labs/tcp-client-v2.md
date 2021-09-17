@@ -82,7 +82,7 @@ Here is a video of the program running:
 - Learn to read from a file and `stdin`.
 - Get more experience with allocating memory and function pointers.
 - Program with pipelining in a socket program.
-- Understand how data is buffered when calling `send()` and `recv()`
+- Understand how data is buffered when calling `send()` and `recv()`.
 
 
 ## Requirements
