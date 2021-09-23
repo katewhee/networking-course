@@ -112,7 +112,7 @@ Options:
 
 - To simplify your program, all actions and text provided to your program must be sent to the server before reading the response.
 
-- If an action provided in a file is unknown, that line must be skipped. This includes blank lines.
+- If a line is malformed, it must be skipped. A valid line consists of an action and a non-empty message.
 
 - You must properly separate out the responses.
 
