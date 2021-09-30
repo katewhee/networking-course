@@ -131,7 +131,7 @@ To submit your code, push it to your Github repository. Tag the commit you want 
     - [`stderr` vs `stdout`](https://stackoverflow.com/questions/3385201/confused-about-stdin-stdout-and-stderr){:target="_blank"}
     - [Redirect `stderror`](https://askubuntu.com/questions/625224/how-to-redirect-stderr-to-a-file){:target="_blank"}
 
-- [Printing to `stderr` or `stdout`](https://stackoverflow.com/questions/39002052/how-i-can-print-to-stderr-in-c#39002243)
+- [Printing to `stderr` or `stdout`](https://stackoverflow.com/questions/39002052/how-i-can-print-to-stderr-in-c#39002243){:target="_blank"}
 
 - [Wrapping `printf` into a function](https://stackoverflow.com/questions/20639632/how-to-wrap-printf-into-a-function-or-macro){:target="_blank"}
 
