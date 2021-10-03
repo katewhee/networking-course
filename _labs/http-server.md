@@ -74,7 +74,7 @@ Options:
 
 - Your server must be able to *parse all request types* (`POST`, `PUT`, etc.); however, you only need to service `GET` requests. If a request type other than `GET` is received, you must return a `405 Method Not Allowed` response. 
 
-- Your server mut be able to *parse all HTTP headers* in a request.
+- Your server must parse *all* HTTP headers in a request.
 
 - You are only required to respond with one header, `Content-Length`, which contains the size of the response file. You are welcome to support other response headers, such as `Content-Type`, `Last-Modified`, etc.
 
