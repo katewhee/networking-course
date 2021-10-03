@@ -31,17 +31,17 @@ We will not be using a username and password for this lab.
 
 ### Protocol
 
-You will be using the [Paho MQTT C Client Library](https://www.eclipse.org/paho/index.php?page=clients/c/index.php){:target="_blank"}. This library comes in two flavors, classic (blocking) and async (non-blocking). For this lab, you must use the async version. 
+You will be using the [Paho MQTT C Client Library](https://www.eclipse.org/paho/index.php?page=clients/c/index.php){:target="_blank"}. This library comes in two flavors, classic (blocking) and async (non-blocking). For this lab, you must use the [async version](https://www.eclipse.org/paho/files/mqttdoc/MQTTAsync/html/index.html){:target="_blank"}.
 
-To use this library, you need to install it on your computer. To do so, follow these [instructions](https://github.com/eclipse/paho.mqtt.c#build-instructions-for-gnu-make). As the instructions say, you need to have the OpenSSL development package installed. You can install it by running,
+To use this library, you need to install it on your computer. To do so, follow these [instructions](https://github.com/eclipse/paho.mqtt.c#build-instructions-for-gnu-make){:target="_blank"}. As the instructions say, you need to have the OpenSSL development package installed. You can install it by running,
 
 ```
 apt-get install libssl-dev
 ```
 
-The library is installed on the Embedded Lab computers, but _not_ on the CAEDM computers.
+The library is installed on the Embedded Lab computers.
 
-We will be going back to our old-faithful protocol. It will work the following way: A client will publish a message with a topic set to `<netid>/<action>`. The payload of the message will be the text you want to transform. For example, if you want to uppercase the text, "Networking is the best!" and your NetID is [le0nh4rt](https://en.wikipedia.org/wiki/Squall_Leonhart), then you would publish to the topic `le0nh4rt/uppercase` and the message would be "Networking is the best!". Your client must subscribe to `le0nh4rt/response` to get the response, which in this example would be "NETWORKING IS THE BEST!".
+We will be going back to our old-faithful protocol. It will work the following way: A client will publish a message with a topic set to `<netid>/<action>`. The payload of the message will be the text you want to transform. For example, if you want to uppercase the text, "Networking is the best!" and your NetID is [le0nh4rt](https://en.wikipedia.org/wiki/Squall_Leonhart){:target="_blank"}, then you would publish to the topic `le0nh4rt/uppercase` and the message would be "Networking is the best!". Your client must subscribe to `le0nh4rt/response` to get the response, which in this example would be "NETWORKING IS THE BEST!".
 
 **Note**: We are trying to fit a request/response protocol into a publisher/subscriber model. Though it happens all the time, it is not ideal and slightly unintuitive. We are doing this to combine something you are familiar with something new. In the next lab, you will see the full power and beauty of a publisher/subscriber protocol.
 
@@ -83,7 +83,7 @@ Here is a demonstration of the client:
 
 - The name of your program must be named `mqtt_client`.
 
-- Your program must have the following usage pattern (provided above) and parse all of the options and arguments correctly.
+- Your program must have the usage pattern provided above and parse all of the options and arguments correctly.
 
 - The default port must be `1883`, and the default hostname must be `localhost`.
 
@@ -96,7 +96,7 @@ Here is a demonstration of the client:
 
 I have provided an MQTT broker at lundrigan.byu.edu:1883. You can use it to test your client. 
 
-You can also install [`mosquitto`](https://mosquitto.org), a popular open-source MQTT broker. Using mosquitto, you can test locally on your machine. You might consider installing `mosquitto-clients`, which gives you [`mosquitto_pub`](https://mosquitto.org/man/mosquitto_pub-1.html) and [`mosuquitto_sub`](https://mosquitto.org/man/mosquitto_sub-1.html), which are clients to publish and subscribe with.
+You can also install [`mosquitto`](https://mosquitto.org){:target="_blank"}, a popular open-source MQTT broker. Using mosquitto, you can test locally on your machine. You might consider installing `mosquitto-clients`, which gives you [`mosquitto_pub`](https://mosquitto.org/man/mosquitto_pub-1.html){:target="_blank"} and [`mosuquitto_sub`](https://mosquitto.org/man/mosquitto_sub-1.html){:target="_blank"}, which are clients to publish and subscribe with.
 
 
 ## Submission
@@ -106,11 +106,11 @@ To submit your code, push it to your Github repository. Tag the commit you want 
 
 ## Resources
 
-- [Paho MQTT C Client Documentation](https://www.eclipse.org/paho/files/mqttdoc/MQTTClient/html/index.html){:target="_blank"}
+- [Paho Asynchronous MQTT C Client Library](https://www.eclipse.org/paho/files/mqttdoc/MQTTAsync/html/index.html){:target="_blank"}
 
-- [MQTTClient.h Documentation](https://www.eclipse.org/paho/files/mqttdoc/MQTTClient/html/_m_q_t_t_client_8h.html#a203b545c999beb6b825ec99b6aea79ab){:target="_blank"}
+- [MQTTAsync.h Documentation](https://www.eclipse.org/paho/files/mqttdoc/MQTTAsync/html/_m_q_t_t_async_8h.html){:target="_blank"}
 
-- [Asynchronous publication example](https://www.eclipse.org/paho/files/mqttdoc/MQTTClient/html/pubasync.html){:target="_blank"}
+- [Publication example](https://www.eclipse.org/paho/files/mqttdoc/MQTTAsync/html/publish.html){:target="_blank"}
 
-- [Asynchronous subscription example](https://www.eclipse.org/paho/files/mqttdoc/MQTTClient/html/subasync.html){:target="_blank"}
+- [Subscription example](https://www.eclipse.org/paho/files/mqttdoc/MQTTAsync/html/subscribe.html){:target="_blank"}
 
