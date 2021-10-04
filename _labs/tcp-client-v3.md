@@ -78,7 +78,18 @@ If you were to print this to your console, you would see:
 @\0\0�The LAN Before Time
 ```
 
-Where `\0` is the NULL terminator and � is `DC3`, which is an unrepresentable ASCII character.
+Where `\0` is the NULL terminator and � is `DC3` (device control 3) on the ASCII table, which is an unrepresentable ASCII character. The response from the server would be (displayed in hex format):
+
+```
+00 00 00 13 65 6d 69 54 20 65 72 6f 66 65 42 20 4e 41 4c 20 65 68 54
+```
+
+If you were to print this to your console, you would see:
+```
+\0\0\0�emiT erofeB NAL ehT
+```
+
+Where `\0` is the NULL terminator and � is `DC3` (device control 3) on the ASCII table.
 
 
 ### Command-line Interface (CLI)
