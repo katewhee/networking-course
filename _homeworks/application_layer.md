@@ -25,7 +25,7 @@ problems:
     
     - question: Suppose you can access the caches in the local DNS servers of your department. Can you propose a way to roughly determine the Web servers (outside your department) that are most popular among the users in your department? Explain.
 
-    - question: Suppose that your department has a local DNS server for all computers in the department. You are an ordinary user (i.e., not a network administrator). Can you determine if an external website was likely accessed from a computer in your department a couple of seconds ago? Explain.
+    - question: Suppose that your department has a local DNS server for all computers in the department. You are an ordinary user (i.e., not a network administrator). Can you determine if an external website was likely accessed recently from a computer in your department? Explain.
     
     - question: Suppose you join a BitTorrent torrent, but you do not want to upload any data to any other peers (free-riding). Can you receive a complete copy of a file that is shared by the swarm. Why or why not?
 wireshark_labs:
