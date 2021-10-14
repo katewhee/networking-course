@@ -61,3 +61,23 @@ If you ever need to pull down changes I made (I will let you know when this is t
 git fetch template
 git merge template/master
 ```
+
+## Lab Submission
+
+To submit your lab, you must create a tag named `final` on your git repository. The following command will tag your most recent commit and push that tag to GitHub:
+
+```
+git tag final
+git push origin final
+```
+
+This tag will point to your most recent commit of whichever branch you are currently located on (so make sure all of your changes are committed before running this). If you are not confident you did this correctly, you may want to go to a new directory (not in your repo) and run `git clone --branch final <repo_url>` to clone your tag and verify that it builds and runs correctly.
+
+If, after you create this tag, you want to change it (i.e., re-submit your code), you can run the following commands and include the --force option to overwrite the tag:
+
+```
+git tag --force final
+git push --force origin final
+```
+
+If you don’t use the correct tag name (`final`), the lab will not be count as submitted.
