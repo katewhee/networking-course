@@ -23,7 +23,7 @@ There are two parts to this project, the HTTP parsing and CLI.
 ### HTTP Parsing
 Assuming you did the previous lab correctly, you will need to modify the logic that parses a request and builds a response—all of the TCP related logic can stay the same. The HTTP request and response format are pure ASCII, so a lot of the work and tooling you have built around parsing the other protocol still apply.
 
-For your server, you can assume that all requests and responses will be in `HTTP/1.1`. I've provided a small demo webpage in the `www` folder of the lab.
+For your server, your responses will be in `HTTP/1.0`. I've provided a small demo webpage in the `www` folder of the lab.
 
 ### Command-line Interface (CLI)
 
