@@ -5,9 +5,9 @@ toc: false
 icon: fas fa-palette
 ---
 
-> Any fool can write code that a computer can understand. Good programmers write code that humans can understand.
+> Computers are useless. They can only give you answers.
 > 
-> [Martin Fowler](https://en.wikipedia.org/wiki/Martin_Fowler_(software_engineer)){:target="_blank"}
+> Pablo Picasso
 
 When writing code for a class, it can be a temptation to write code as quickly as possible so that you can get the job done and move on to something else. I get it. I've been there. While this inclination is understandable, you are doing yourself a disservice. You will immediately regret your decision if you ever have to go back and fix a bug in your code. You are also building a habit of writing sub-par code. As you prepare for the workforce, you will want to start writing code that you are proud of—code that is clean, concise, and easy to understand. In this class, I encourage craftsmanship of code: code that is carefully crafted. This does not mean that your code gets written perfectly and cleanly the first time.
 
