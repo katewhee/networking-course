@@ -95,6 +95,8 @@ Options:
 
 - Your program must return a correct exit code, using `EXIT_SUCCESS` and `EXIT_FAILURE` (see [here](https://en.wikipedia.org/wiki/Exit_status#C_language){:target="_blank"}).
 
+- Your program should be robust against bad input from the user.
+
 - Your program should be able to handle an arbitrary amount of input, up to 1024 bytes.
 
 
