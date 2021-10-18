@@ -21,7 +21,7 @@ layout: default
             {% if problem.parts %}
             <ol type="a">
                 {% for part in problem.parts %}
-                <li>{{ part }}</li>
+                <li>{{ part | markdownify }}</li>
                 {% endfor %}
             </ol>
             {% endif %}
@@ -60,7 +60,8 @@ layout: default
 
             <h3>Coming
                 <span>C</span><span>h</span><span>r</span><span>i</span><span>s</span><span>t</span><span>m</span><span>a</span><span>s</span>
-                <span>2</span><span>0</span><span>0</span><span>2</span><span>!</span></h3>
+                <span>2</span><span>0</span><span>0</span><span>2</span><span>!</span>
+            </h3>
 
         </div>
         {% endif %}
