@@ -16,7 +16,9 @@ repo: https://github.com/byu-ecen426-classroom/mqtt_client.git
 
 ## Overview
 
-For this lab, you will be writing an [MQTT](https://mqtt.org){:target="_blank"} client. MQTT is a different type of application layer protocol from what you have seen in the past. It will be worth your time to understand how it works before you dive into implementing a client. We will discuss it in lecture, but it is worth reading some [articles](https://www.hivemq.com/blog/how-to-get-started-with-mqtt/){:target="_blank"} and/or watching some [videos](https://youtu.be/LKz1jYngpcU){:target="_blank"}. It is a fairly complex protocol when you get into the details of how it works.
+For this lab, **you can use any programming language you would like**, but I recommend Python since I will be able to help if you run into any issues. If you choose another language, then you might not get as much help from me or the TAs.
+
+You will be writing an [MQTT](https://mqtt.org){:target="_blank"} client. MQTT is a different type of application layer protocol from what you have seen in the past. It will be worth your time to understand how it works before you dive into implementing a client. We discussed it in lecture, but it is worth reading some [articles](https://www.hivemq.com/blog/how-to-get-started-with-mqtt/){:target="_blank"} and/or watching some [videos](https://youtu.be/LKz1jYngpcU){:target="_blank"}. It is a fairly complex protocol when you get into the details of how it works.
 
 To use MQTT, you need a couple of pieces of information:
 
@@ -31,19 +33,9 @@ We will not be using a username and password for this lab.
 
 ### Protocol
 
-You will be using the [Paho MQTT C Client Library](https://www.eclipse.org/paho/index.php?page=clients/c/index.php){:target="_blank"}. This library comes in two flavors, classic (blocking) and async (non-blocking). For this lab, you must use the [async version](https://www.eclipse.org/paho/files/mqttdoc/MQTTAsync/html/index.html){:target="_blank"}.
-
-To use this library, you need to install it on your computer. To do so, follow these [instructions](https://github.com/eclipse/paho.mqtt.c#build-instructions-for-gnu-make){:target="_blank"}. As the instructions say, you need to have the OpenSSL development package installed. You can install it by running,
-
-```
-apt-get install libssl-dev
-```
-
-The library is installed on the Embedded Lab computers.
-
 We will be going back to our old-faithful protocol. It will work the following way: A client will publish a message with a topic set to `<netid>/<action>/request`. The payload of the message will be the text you want to transform. For example, if you want to uppercase the text, "Networking is the best!" and your NetID is [le0nh4rt](https://en.wikipedia.org/wiki/Squall_Leonhart){:target="_blank"}, then you would publish to the topic `le0nh4rt/uppercase/request` and the message would be "Networking is the best!". Your client must subscribe to the topic `<netid>/<action>/response`. Using the previous example, you would subscribe to `le0nh4rt/uppercase/response` to get the response, which would be "NETWORKING IS THE BEST!".
 
-**Note**: We are trying to fit a request/response protocol into a publisher/subscriber model. Though it happens all the time, it is not ideal and slightly unintuitive. We are doing this to combine something you are familiar with something new. In the next lab, you will see the full power and beauty of a publisher/subscriber protocol.
+**Note**: We are trying to fit a request/response protocol into a publisher/subscriber model. Though it happens all the time, it is not ideal and slightly unintuitive. We are doing this to combine something you are familiar with something new. In the last lab, you will see the full power and beauty of a publisher/subscriber protocol.
 
 ### CLI
 
@@ -73,15 +65,11 @@ Here is a demonstration of the client:
 
 - Learn MQTT and how to use it.
 
-- Get experience with integrating a 3rd party library.
-
 - Get experience with asynchronous code.
 
 ## Requirements
 
-- No .h file is provided in this lab. Feel free to structure the code however you would like. Good luck! 
-
-- The name of your program must be named `mqtt_client`.
+- If you use Python, you must name your program `mqtt_client.py` and you must provide a [`requirements.txt` file](https://www.idkrtm.com/what-is-the-python-requirements-txt/){:target="_blank"} with all of the dependencies for the lab. If you are using another language, you must provide me with an executable that can run on the Embedded Lab computers.
 
 - Your program must have the usage pattern provided above and parse all of the options and arguments correctly.
 
@@ -106,11 +94,12 @@ To submit your code, push it to your Github repository. Tag the commit you want 
 
 ## Resources
 
-- [Paho Asynchronous MQTT C Client Library](https://www.eclipse.org/paho/files/mqttdoc/MQTTAsync/html/index.html){:target="_blank"}
+If you are doing your lab in Python, these resources might be helpful:
 
-- [MQTTAsync.h Documentation](https://www.eclipse.org/paho/files/mqttdoc/MQTTAsync/html/_m_q_t_t_async_8h.html){:target="_blank"}
-
-- [Publication example](https://www.eclipse.org/paho/files/mqttdoc/MQTTAsync/html/publish.html){:target="_blank"}
-
-- [Subscription example](https://www.eclipse.org/paho/files/mqttdoc/MQTTAsync/html/subscribe.html){:target="_blank"}
+- [argparse](https://docs.python.org/3/library/argparse.html){:target="_blank"} or [click](https://click.palletsprojects.com/en/8.0.x/){:target="_blank"}
+- [Paho MQTT Python client](https://www.eclipse.org/paho/index.php?page=clients/python/docs/index.php){:target="_blank"}
+- [Paho MQTT Python client publication example](https://github.com/eclipse/paho.mqtt.python/blob/master/examples/client_pub-wait.py){:target="_blank"}
+- [Paho MQTT Python client subscription example](https://github.com/eclipse/paho.mqtt.python/blob/master/examples/client_sub.py){:target="_blank"}
+- [Python logging](https://realpython.com/python-logging/)
+- [Printing to `stderr` in Python](https://stackoverflow.com/questions/5574702/how-to-print-to-stderr-in-python)
 
