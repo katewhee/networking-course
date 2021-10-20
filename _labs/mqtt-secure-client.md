@@ -1,6 +1,6 @@
 ---
 toc: false
-title: HTTP to MQTT Proxy
+title: Secure MQTT Client
 number: 8
 repo: https://github.com/byu-ecen426-classroom/http_to_mqtt_proxy.git
 ---
