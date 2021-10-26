@@ -72,6 +72,8 @@ Options:
 
 - The default folder must be `.`.
 
+- When the delay option is set, your server must wait 5 second after receiving an HTTP request before sending a response.
+
 - Your server must be able to *parse all request types* (`POST`, `PUT`, etc.); however, you only need to service `GET` requests. If a request type other than `GET` is received, you must return a `405 Method Not Allowed` response. 
 
 - Your server must parse *all* HTTP headers in a request.
