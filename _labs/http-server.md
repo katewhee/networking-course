@@ -96,6 +96,8 @@ Options:
 
 You can follow the same tools as the previous lab. You can also add [httpie](https://httpie.org){:target="_blank"} or [curl](https://curl.haxx.se){:target="_blank"} to your repertoire. They will create a valid HTTP request for you to test your server against. Once you have refined your lab, you can use a web browser to make sure your response is well-formed, and the data you are returning is correct.
 
+**Warning**: Chrome has a weird behavior where it will sometimes set up a TCP connection with your server but then not send anything. This TCP connection will cause your server to block, waiting for an HTTP request. I'm not sure why Chrome does this, but it is probably related to performance enhancements and anticipating another HTTP request might be sent. Either way, don't worry about this case since it is a Chrome-specific issue.
+
 
 ## Submission
 
