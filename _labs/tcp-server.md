@@ -84,7 +84,7 @@ Options:
 
 - If a client does not send enough data (e.g., the length is 10 but they only send 4 bytes), your server is allowed to block waiting for the remaining bytes of data.
 
-- Properly shutdown server when an interrupt signal (`ctrl-c`) is sent to server.
+- Properly shutdown server when an interrupt signal (`ctrl-c`) is sent to your process. If your server is in the middle of sending/receiving to a client, you can let that finish before stopping the server.
 
 
 ## Testing
