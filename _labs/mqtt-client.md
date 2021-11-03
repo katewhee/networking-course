@@ -69,7 +69,7 @@ Here is a demonstration of the client:
 
 ## Requirements
 
-- If you use Python, you must name your program `mqtt_client.py` and you must provide a [`requirements.txt` file](https://www.idkrtm.com/what-is-the-python-requirements-txt/){:target="_blank"} with all of the dependencies for the lab. If you are using another language, you must provide me with an executable that can run on the Embedded Lab computers.
+- If you use Python, you must name your program `mqtt_client.py` and you must provide a [`requirements.txt` file](https://www.idkrtm.com/what-is-the-python-requirements-txt/){:target="_blank"} with all of the dependencies for the lab. If you are using another language, you must provide me with an executable that can run on the Embedded Lab computers named `mqtt_client`.
 
 - Your program must have the usage pattern provided above and parse all of the options and arguments correctly.
 
