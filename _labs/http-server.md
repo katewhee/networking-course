@@ -110,7 +110,7 @@ To submit your code, push it to your Github repository. Tag the commit you want 
 
 ## Resources
 
-- [`strtok`](https://linux.die.net/man/3/strtok){:target="_blank"}
+- [`strtok_r`](https://linux.die.net/man/3/strtok){:target="_blank"}
 
 - HTTP
   - [HTTP Specification](https://tools.ietf.org/html/rfc7230){:target="_blank"}
