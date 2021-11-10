@@ -59,7 +59,7 @@ To be more specific, the Diffie-Hellman parameters (p and g) you must use are pr
 
 Encryption and decryption uses the [Fernet](https://github.com/fernet/spec/){:target="_blank"} algorithm. The shared key along with the plaintext or ciphertext are used as inputs into the algorithm. The specification for the algorithm is published [here](https://github.com/fernet/spec/blob/master/Spec.md){:target="_blank"}.
 
-**Note**: If you use the provided Python code, [crypto.py](https://github.com/byu-ecen426-classroom/secure_mqtt_client/blob/main/crypto.py){:target="_blank"}, you don't have to know any of these details since it takes care of it for you.
+**Note**: If you use the provided Python code, [crypto.py](https://github.com/byu-ecen426-classroom/secure_mqtt_client/blob/main/crypto.py){:target="_blank"}, you don't have to implement any of these details yourself.
 
 
 ### CLI
