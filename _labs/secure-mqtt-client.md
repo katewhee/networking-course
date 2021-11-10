@@ -84,6 +84,8 @@ There are no changes to the CLI from the previous lab. All changes in this lab w
 
 - Your client must use the provided [dhparam4096.pem](https://github.com/byu-ecen426-classroom/secure_mqtt_client/blob/main/dhparam4096.pem){:target="_blank"} file for the Diffie-Hellman parameters.
 
+- To make sure you understand what is going on, there are questions you need to answer in the [README.md](https://github.com/byu-ecen426-classroom/secure_mqtt_client/blob/main/README.md) file. You must answer these questions in order to consider your submission complete. You can answer the questions directly in the README.md file of your repo.
+
 
 ## Testing
 
