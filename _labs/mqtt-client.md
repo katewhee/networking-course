@@ -39,7 +39,7 @@ We will be going back to our old-faithful protocol. It will work the following w
 
 ### CLI
 
-The only arguments for this lab are NetID, action, message. The NetID will be used for the topic that you publish and subscribe to. The action and message will be the same as the previous labs. Similar to earlier labs, your client must take a hostname and port number. The default port number should be 1883, and the default host should be `localhost`. The provided NetID will also be used for the client ID. You must use the following usage pattern:
+The only arguments for this lab are NetID, action, message. The NetID will be used for the topic that you publish and subscribe to. The action and message will be the same as the previous labs. Similar to earlier labs, your client must take a hostname and port number. The default port number should be 1883, and the default host should be `localhost`. The provided NetID will also be used for the client ID. You must use look something like this usage pattern:
 
 ```
 Usage: mqtt_client [--help] [-v] [-h HOST] [-p PORT] NETID ACTION MESSAGE
@@ -56,6 +56,8 @@ Options:
  --host HOSTNAME, -h HOSTNAME
  --port PORT, -p PORT
 ```
+
+**Note**: The usage pattern can differ slightly depending on the language and library you use to implement the argument parsing, but the general meaning of the usuage pattern should be the same.
 
 Here is a demonstration of the client:
 
