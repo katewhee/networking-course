@@ -109,3 +109,4 @@ If you are doing your lab in Python, these resources might be helpful:
 Other resources:
 
 - [Diffie Hellman Secret Key Exchange using OpenSSL](https://sandilands.info/sgordon/diffie-hellman-secret-key-exchange-with-openssl){:target="_blank"}
+- [Example of public key format]({% link assets/public_key.pem %}){:target="_blank"}
