@@ -104,3 +104,8 @@ To submit your code, push it to your Github repository. Tag the commit you want 
 If you are doing your lab in Python, these resources might be helpful:
 
 - I have provided you with [crypto.py](https://github.com/byu-ecen426-classroom/secure_mqtt_client/blob/main/crypto.py){:target="_blank"} that interacts with the [cryptography](https://cryptography.io/en/latest/){:target="_blank"} Python package.
+
+
+Other resources:
+
+- [Diffie Hellman Secret Key Exchange using OpenSSL](https://sandilands.info/sgordon/diffie-hellman-secret-key-exchange-with-openssl){:target="_blank"}
