@@ -52,14 +52,14 @@ You must publish an "online" message when you start your client and register a [
 
 ### User Interface
 
-This interface will be different from any other lab. Rather than using a command-line interface, you will be building a graphical interface. Your GUI must be able to access the following options:
+This interface will be different from any other lab. Rather than using a command-line interface, you will be building a graphical interface. A user must be able to provide the following information to your application:
 
 - NetID: the NetID of the person using your application
 - Name: the human readable name of the person using your application. This is optional and if not provided, you can use the NetID as the name.
 - Hostname: The hostname of the broker. The default should be `localhost`.
 - Port: The port of the broker. The default should be 1885.
 
-You can choose to accept these arguments/options through the command line or through your interface.
+You can choose to accept these arguments/options through the command line or through the graphical interface.
 
 ## Objectives
 
