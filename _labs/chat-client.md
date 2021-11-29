@@ -74,7 +74,7 @@ You can choose to accept these arguments/options through the command line or thr
 
 - Your program must be able to accept all arguments and options as outlined above.
 
-- The default port must be `1885` (or `1886` for [WebSockets](https://github.com/mqttjs/MQTT.js)){:target="_blank"}, and the default hostname must be `localhost`.
+- The default port must be `1885` (or `1886` for [WebSockets](https://github.com/mqttjs/MQTT.js){:target="_blank"}), and the default hostname must be `localhost`.
 
 - Your client must be able to work with other chat clients.
 
