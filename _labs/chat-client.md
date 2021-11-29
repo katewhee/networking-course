@@ -57,7 +57,7 @@ This interface will be different from any other lab. Rather than using a command
 - NetID: the NetID of the person using your application
 - Name: the human readable name of the person using your application. This is optional and if not provided, you can use the NetID as the name.
 - Hostname: The hostname of the broker. The default should be `localhost`.
-- Port: The port of the broker. The default should be 1885.
+- Port: The port of the broker. The default should be 1885 or 1886 for WebSockets.
 
 You can choose to accept these arguments/options through the command line or through the graphical interface.
 
@@ -74,7 +74,7 @@ You can choose to accept these arguments/options through the command line or thr
 
 - Your program must be able to accept all arguments and options as outlined above.
 
-- The default port must be `1885`, and the default hostname must be `localhost`.
+- The default port must be `1885` (or `1886` for [WebSockets](https://github.com/mqttjs/MQTT.js)){:target="_blank"}, and the default hostname must be `localhost`.
 
 - Your client must be able to work with other chat clients.
 
@@ -97,7 +97,7 @@ You can choose to accept these arguments/options through the command line or thr
 
 ## Testing
 
-The chat server will be hosted at lundrigan.byu.edu:1885.
+The chat server will be hosted at lundrigan.byu.edu:1885 (or lundrigan.byu.edu:1886 for WebSockets).
 
 One good way of testing your chat client is to bring up multiple instances of your client. That way, you can see how it responds to people coming online and offline.
 
@@ -108,4 +108,4 @@ To submit your code, push it to your Github repository. Tag the commit you want 
 
 ## Resources
 
-
+- 🤷‍♂️
