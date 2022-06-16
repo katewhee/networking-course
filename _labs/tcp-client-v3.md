@@ -107,7 +107,7 @@ At this point in the labs, you might have incurred some [technical debt](https:/
 
 - Implement a binary protocol.
 
-- Get more practice with bit bashing.
+- Learn about bit fields in C or get more practice with bit bashing.
 
 
 ## Requirements
@@ -150,3 +150,7 @@ To submit your code, push it to your Github repository. Tag the commit you want 
 
 - [Copying integer value to character buffer and vice versa in C](https://www.includehelp.com/c/copying-of-integer-value-to-character-buffer-and-vice-versa-in-c.aspx){:target="_blank"}
 
+- [C bit fields](https://www.tutorialspoint.com/cprogramming/c_bit_fields.htm)
+  - [Reference](https://en.cppreference.com/w/cpp/language/bit_field)
+  - Stack Overflow: [here](https://stackoverflow.com/questions/20911460/bit-fields-in-c-and-c-where-are-they-used) and [here](https://stackoverflow.com/questions/24933242/when-to-use-bit-fields-in-c)
+  - [Deep dive](http://www.catb.org/esr/structure-packing/)
