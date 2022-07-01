@@ -22,11 +22,11 @@ For this lab, you will be building a simple TCP client that sends data to a serv
 - Interact with a TCP server using the protocol outlined below.
 - Build a program that can parse command-line options and arguments.
 
-The purpose of the protocol is to have a client send text to a server to transform. The server will convert the text by either uppercasing, lowercasing, title casing, reversing, or shuffling the text and send it back to the client.
+The purpose of the protocol is to have a client send text to a server to transform. The server will convert the text by either uppercasing, lowercasing, reversing, or shuffling the text and send it back to the client. There is also a random action that randomly subtracts and duplicates characters.
 
 ### Protocol
 
-The request structure is in the form of `ACTION LENGTH MESSAGE`. The values of `ACTION` can be "uppercase", "lowercase", "title-case", "reverse", or "shuffle". `LENGTH` is the length of the message. `MESSAGE` is the text that you want to send. It must be made out of displayable ASCII characters. For example, if you want "Hello World" to be reversed, you would send
+The request structure is in the form of `ACTION LENGTH MESSAGE`. The values of `ACTION` can be "uppercase", "lowercase", "reverse", "shuffle", or "random". `LENGTH` is the length of the message. `MESSAGE` is the text that you want to send. It must be made out of displayable ASCII characters. For example, if you want "Hello World" to be reversed, you would send
 
 ```
 reverse 11 Hello World
@@ -74,8 +74,8 @@ For all labs, you have the option of using a simple logging library, [log.c](htt
 Usage: tcp_client [--help] [-v] [-h HOST] [-p PORT] ACTION MESSAGE
 
 Arguments:
-  ACTION   Must be uppercase, lowercase, title-case,
-           reverse, or shuffle.
+  ACTION   Must be uppercase, lowercase, reverse,
+           shuffle, or random.
   MESSAGE  Message to send to the server
 
 Options:
@@ -110,7 +110,7 @@ nc -l 8080
 
 You can have your client connect to the server and see what is being received. You can also type a message into `netcat` as a response to your client.
 
-I will also be running a TCP server at `lundrigan.byu.edu:8080`. This server is only accessible on campus (for security purposes). If you are off-campus, you will need to VPN or use [SSH port forwarding](https://help.ubuntu.com/community/SSH/OpenSSH/PortForwarding){:target="_blank"} to test against it. Here is a video demonstrating how to using port forwarding to test out lab 1:
+I will also be running a TCP server at `lundrigan.byu.edu:8080`. This server is only accessible on campus (for security purposes). If you are off-campus, you will need to VPN or use [SSH port forwarding](https://help.ubuntu.com/community/SSH/OpenSSH/PortForwarding){:target="_blank"} to test against it. Using the College's VPN is the easier approach, however, here is a video demonstrating how to using port forwarding to test out lab 1:
 
 <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/Kfmsi_WCd74" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
