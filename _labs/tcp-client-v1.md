@@ -44,6 +44,10 @@ To use your protocol, you will be building a command-line tool that accepts diff
 
 <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/pdnJnOV6zqI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
+<div class="alert alert-warning" style="width: 560px" role="alert">
+  Warning: This video is for an older version of the lab. The functionality will be the same, but some of the specifics might be slightly different.
+</div>
+
 Your program must be able to accept a port and hostname as an option. For arguments, your program must be able to accept an action and a message.
 
 To follow standard Unix norms, you must be careful what gets printed out to `stdout` and `stderr`. `stdout` is for the main output of your program and should be safe to pass to another program (using the pipe `|` operator). `stderr` is for all other output (errors and debugging).
