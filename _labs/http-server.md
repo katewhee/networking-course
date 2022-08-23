@@ -30,7 +30,7 @@ For your server, your responses will be in `HTTP/1.0`. I've provided a small dem
 Only two modifications need to be made to the CLI of your server from the previous lab. First, you need to add an option that allows you to pass in the folder that your server will look for files. What I mean by this is when someone requests `http://localhost:8080/test.jpg`, where should your server look for `test.jpg`? It could look relative to the root directory, but that is a big security problem because then the person requesting has access to your whole hard drive. Instead, an option will be provided that makes all requests relative to that folder. For example, you could run the server,
 
 ```
-bin/http_server -f ./www
+python http_server.py -f ./www
 ```
 
 Then all requests would be relative to the `www` folder. The previous request would try to access a file at `www/test.jpg`. The second change you need to make is adding a `--delay` flag. This will purposely delay the handling of a HTTP request for 5 seconds. This flag is purely to help with testing your code and has no real-world benefit. 
@@ -38,6 +38,10 @@ Then all requests would be relative to the `www` folder. The previous request wo
 Here is a demonstration of the server:
 
 <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/kO3OcsUKtgQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+<div class="alert alert-warning" style="width: 560px" role="alert">
+  Warning: This video is for an older version of the lab. The functionality will be the same, but some of the specifics might be slightly different.
+</div>
 
 
 ## Objectives
@@ -51,11 +55,15 @@ Here is a demonstration of the server:
 
 ## Requirements
 
-- No modifications to `http_server.h` are allowed.
+- You must use Python 3.9.
 
-- The name of your program must be named `http_server`.
+- You **can not use any third party Python libraries** for this lab. If you have to `pip install` or clone any repos, in order to import a library, stop. The only exception is the formatter, [Black](https://github.com/psf/black){:target="_blank"}, which you have to `pip install`. However, you do not use it in your code. 
 
-- `http_server` accepts no arguments and five options:
+- For all socket related tasks, you must only use the [low-level `socket` interface](https://docs.python.org/3/library/socket.html){:target="_blank"} that Python provides. No high-level server socket interfaces are allowed.
+
+- The name of your program must be named `http_server.py`.
+
+- `http_server.py` accepts no arguments and five options:
 
 ```
 Usage: http_server [--help] [-v] [-d] [-p PORT] [-f FOLDER]
@@ -88,10 +96,6 @@ Options:
 
 - Your server needs to be able to return a requested file of any size.
 
-- You can make the following assumptions:
-  - [The max file name and path will be followed](https://serverfault.com/a/306726){:target="_blank"}. They are provided in Linux as `NAME_MAX` and `PATH_MAX`.
-  - The max header size you need to be able to support is 512 bytes. This is provided in http_server.h as `HTTP_SERVER_MAX_HEADER_SIZE`.
-
 
 
 ## Testing
@@ -110,12 +114,6 @@ To submit your code, push it to your Github repository. Tag the commit you want 
 
 ## Resources
 
-- [`strtok_r`](https://linux.die.net/man/3/strtok){:target="_blank"}
-
 - HTTP
   - [HTTP Specification](https://tools.ietf.org/html/rfc7230){:target="_blank"}
   - [Wikipedia](https://en.wikipedia.org/wiki/Hypertext_Transfer_Protocol#Message_format){:target="_blank"}
-
-- [File IO](https://man7.org/linux/man-pages/man3/fopen.3.html){:target="_blank"}
-
-- Consider writing a helper function called `send_all`

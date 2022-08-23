@@ -71,6 +71,10 @@ Here is a video of the program running:
 
 <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/Udl4iCAU9MU" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
+<div class="alert alert-warning" style="width: 560px" role="alert">
+  Warning: This video is for an older version of the lab. The functionality will be the same, but some of the specifics might be slightly different.
+</div>
+
 ### Logging
 
 Like the previous labs, I strongly encourage you to use logging to help debug your program and understand its flow. Python provides a powerful [logging library](https://docs.python.org/3/howto/logging.html){:target="_blank"}. Spend some time learning it and it will pay off later.
@@ -84,6 +88,8 @@ Like the previous labs, I strongly encourage you to use logging to help debug yo
 
 
 ## Requirements
+
+- You must use Python 3.9.
 
 - You **can not use any third party Python libraries** for this lab. If you have to `pip install` or clone any repos, in order to import a library, stop. The only exception is the formatter, [Black](https://github.com/psf/black){:target="_blank"}, which you have to `pip install`. However, you do not use it in your code. 
 
