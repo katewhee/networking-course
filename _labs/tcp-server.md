@@ -17,7 +17,7 @@ repo: https://github.com/byu-ecen426-classroom/tcp_server.git
 
 ## Overview
 
-In this lab, you will be building a TCP server that implements your favorite protocol (the same one as the last three labs). The individual parts of the lab are outlined below. **This lab will must be done in Python**, but many of the algorithms that you have developed and refined in the previous labs can be reused in this lab.
+In this lab, you will be building a TCP server that implements your favorite protocol (the same one as the last three labs). The individual parts of the lab are outlined below. **This lab (and all future labs) must be done in Python**, but many of the algorithms that you have developed and refined in the previous labs can be reused in this lab.
 
 ### Protocol
 

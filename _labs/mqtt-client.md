@@ -16,9 +16,7 @@ repo: https://github.com/byu-ecen426-classroom/mqtt_client.git
 
 ## Overview
 
-For this lab, **you can use any programming language you would like**, but I recommend Python since I will be able to help if you run into any issues. If you choose another language, then you might not get as much help from me or the TAs.
-
-You will be writing an [MQTT](https://mqtt.org){:target="_blank"} client. MQTT is a different type of application layer protocol from what you have seen in the past. It will be worth your time to understand how it works before you dive into implementing a client. We discussed it in lecture, but it is worth reading some [articles](https://www.hivemq.com/blog/how-to-get-started-with-mqtt/){:target="_blank"} and/or watching some [videos](https://youtu.be/LKz1jYngpcU){:target="_blank"}. It is a fairly complex protocol when you get into the details of how it works.
+You will be writing an [MQTT](https://mqtt.org){:target="_blank"} client in Python. MQTT is a different type of application layer protocol from what you have seen in the past. It will be worth your time to understand how it works before you dive into implementing a client. We discussed it in lecture, but it is worth reading some [articles](https://www.hivemq.com/blog/how-to-get-started-with-mqtt/){:target="_blank"} and/or watching some [videos](https://youtu.be/LKz1jYngpcU){:target="_blank"}. It is a fairly complex protocol when you get into the details of how it works.
 
 To use MQTT, you need a couple of pieces of information:
 
@@ -63,6 +61,10 @@ Here is a demonstration of the client:
 
 <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/vcE0FdQGQB8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
+<div class="alert alert-warning" style="width: 560px" role="alert">
+  Warning: This video is for an older version of the lab. The functionality will be the same, but some of the specifics might be slightly different.
+</div>
+
 ## Objectives
 
 - Learn MQTT and how to use it.
@@ -71,7 +73,7 @@ Here is a demonstration of the client:
 
 ## Requirements
 
-- If you use Python, you must name your program `mqtt_client.py` and you must provide a [`requirements.txt` file](https://www.idkrtm.com/what-is-the-python-requirements-txt/){:target="_blank"} with all of the dependencies for the lab. If you are using another language, you must provide me with an executable that can run on the Embedded Lab computers named `mqtt_client`.
+- You must name your program `mqtt_client.py` and you must provide a [`requirements.txt` file](https://www.idkrtm.com/what-is-the-python-requirements-txt/){:target="_blank"} with all of the dependencies for the lab. In this lab, you are welcome to use any third party library you would like.
 
 - Your program must have the usage pattern provided above and parse all of the options and arguments correctly.
 
@@ -95,8 +97,6 @@ To submit your code, push it to your Github repository. Tag the commit you want 
 
 
 ## Resources
-
-If you are doing your lab in Python, these resources might be helpful:
 
 - [argparse](https://docs.python.org/3/library/argparse.html){:target="_blank"} or [click](https://click.palletsprojects.com/en/8.0.x/){:target="_blank"}
 - [Paho MQTT Python client](https://www.eclipse.org/paho/index.php?page=clients/python/docs/index.php){:target="_blank"}
