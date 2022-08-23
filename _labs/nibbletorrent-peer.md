@@ -19,6 +19,7 @@ repo: https://github.com/byu-ecen426-classroom/nibbletorrent-peer.git
 
 - Set up tracker
 - Set up peers with only some of the pieces that never have all of the data.
+- This is a hard lab. It requires you to write an TCP server, TCP client, a HTTP client, and a way for all of these threads to communicate with each other.
 
 ## Overview
 
@@ -195,6 +196,10 @@ To submit your code, push it to your Github repository. Tag the commit you want 
 
 - https://en.wikipedia.org/wiki/SHA-1
   - SHA-1 hashes are always 20 bytes long.
+
+- https://stackoverflow.com/questions/27165607/bool-array-to-integer
+
+- https://stackoverflow.com/questions/21017698/converting-int-to-bytes-in-python-3
   
 <!-- 
 https://erdgeist.org/arts/software/opentracker/#invocation
