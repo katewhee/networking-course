@@ -17,6 +17,7 @@ source "https://rubygems.org"
 # If you have any plugins, put them here!
 group :jekyll_plugins do
   gem "jekyll-feed", "~> 0.6"
+  gem 'jekyll_shell_command'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem

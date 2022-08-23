@@ -40,13 +40,13 @@ We are very concerned about wasted space, so we will be packing these bits in ti
 
 The mapping from text action to binary action is as follows:
 
-| Action       | Binary Value |
-| ------------ | ------------ |
-| `uppercase`  | 0x01         |
-| `lowercase`  | 0x02         |
-| `title-case` | 0x04         |
-| `reverse`    | 0x08         |
-| `shuffle`    | 0x10         |
+| Action      | Binary Value |
+| ----------- | ------------ |
+| `uppercase` | 0x01         |
+| `lowercase` | 0x02         |
+| `reverse`   | 0x04         |
+| `shuffle`   | 0x08         |
+| `random`    | 0x10         |
 
 All other values are reserved and should not be used ☠️.
 

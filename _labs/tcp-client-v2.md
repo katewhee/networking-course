@@ -21,7 +21,7 @@ This lab adds [pipelining](https://en.wikipedia.org/wiki/Pipeline_(computing)){:
 
 ### Protocol
 
-The request structure is in the same format as before, `ACTION LENGTH MESSAGE`. The list of actions is the same. However, the response from the server has changed. Instead of sending the transformed text, the server now sends back the length of the response*, followed by the response: `LENGTH TRANSFORMED_MESSAGE`. For example, if your client sent,
+The request structure is in the same format as before, `ACTION LENGTH MESSAGE`. The list of actions is the same. However, the response from the server has changed. Instead of sending the transformed text, the server now sends back the length of the response, followed by the response: `LENGTH TRANSFORMED_MESSAGE`. For example, if your client sent,
 
 ```
 reverse 11 Hello World
@@ -58,10 +58,11 @@ Instead of providing the action and text one at a time (e.g., `./tcp_client reve
 And the contents of `input.txt` could be,
 
 ```
-title-case hello world
+uppercase hello world
 reverse this is a fun lab
-uppercase networking is the best!
+lowercase NETWORKING IS THE BEST!
 shuffle banana
+random GO BYU!
 ```
 
 Here is an [input file]({% link _labs/input.txt %}) to get you started. You will want to create your own to test out various aspects of your program. We will also be adding the ability to read from `stdin` if "-" is provided as the file name. This is a common paradigm for command-line tools and allows for easily pipelining of tools. For example, you could run the following:
@@ -75,6 +76,10 @@ You could imagine more interesting ways of chaining commands together.
 Here is a video of the program running:
 
 <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/V_jFzM07lio" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+<div class="alert alert-warning" style="width: 560px" role="alert">
+  Warning: This video is for an older version of the lab. The functionality will be the same, but some of the specifics might be slightly different.
+</div>
 
 
 ## Objectives
@@ -152,6 +157,3 @@ To submit your code, push it to your Github repository. Tag the commit you want 
     - [fread](http://www.cplusplus.com/reference/cstdio/fread/){:target="_blank"}
 
     - [getline](https://linux.die.net/man/3/getline){:target="_blank"}
-
-
-<p class="almost-hide" markdown="1">* <span>You might be asking yourself, if I sent the message, then I already know the length of the response, why does the server send it to me? Well, don't ask it. If you ask too many questions, then I am going to have to add more actions to the protocol that change the length of the content, which in turn will make the lab harder for you. Just keep quite and hope that no one notices. You're smart, you can understand why the content length would be important in a response outside of the context of this ~~contrived~~ simple protocol.</span></p>

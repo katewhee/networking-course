@@ -14,27 +14,51 @@ repo: https://github.com/byu-ecen426-classroom/tcp_server.git
 
 2. Use [this template repository]({{ page.repo }}){:target="_blank"} to start the lab.
 
+
 ## Overview
 
-In this lab, you will be building a TCP server that implements your favorite protocol (the same one as the last three labs). The individual parts of the lab are outlined below. Many of the components that you have developed and refined in the previous labs can be reused in this lab, with some modifications.
+In this lab, you will be building a TCP server that implements your favorite protocol (the same one as the last three labs). The individual parts of the lab are outlined below. **This lab (and all future labs) must be done in Python**, but many of the algorithms that you have developed and refined in the previous labs can be reused in this lab.
 
 ### Protocol
 
-This lab will be using the same version of the protocol you developed in TCP Client **v1** (all ASCII and no pipelining). This will make it easier to test your server. This also means that your server is in charge of closing the connection. 
+This lab will be using the same version of the protocol you developed in TCP Client **v3** (binary header and pipelining).
 
 The request protocol will be formatted as follows:
 
 ```
-ACTION LENGTH MESSAGE
+ 0                   1                   2                   3
+ 0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1
++-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
+|  Action |                    Message Length                   |
++-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
+|                             Data                              |
++-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
+
+Action: 5 bits
+Message Length: 27 bits
+Data: variable
 ```
 
-Once your server has received a request, it will parse it, transform the message, and send back a response. In processing a request, if an unexpected action is encountered or a request is malformed, then the message "error" should be returned.
+Once your server has received a request, it will parse it, transform the message, and send back a response. In processing a request, if an unexpected action is encountered or a request is malformed, then the message "error" should be returned. Your response must be formatted as:
+
+```
+ 0                   1                   2                   3
+ 0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1
++-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
+|                         Message Length                        |
++-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
+|                             Data                              |
++-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
+
+Message Length: 32 bits
+Data: variable
+```
 
 To simplify this lab, a few adjustments will be made:
 
 - You only need to support one client at a time.
 
-- Typically for a server, you provide the IP address you would like the server to bind to (e.g., `127.0.0.1`, `192.0.2.33`), or `0.0.0.0` to bind to all interfaces. For this lab, you can bind to all interfaces (`AI_PASSIVE` or `INADDR_ANY`, depending on what system call you use).
+- Typically for a server, you provide the IP address you would like the server to bind to (e.g., `127.0.0.1`, `192.0.2.33`), or `0.0.0.0` to bind to all interfaces. For this lab, you can bind to all interfaces. In Python this is done by passing in an empty string `""` as the binding IP address.
 
 
 ### Command-line Interface (CLI)
@@ -47,21 +71,33 @@ Here is a video of the program running:
 
 <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/Udl4iCAU9MU" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
+<div class="alert alert-warning" style="width: 560px" role="alert">
+  Warning: This video is for an older version of the lab. The functionality will be the same, but some of the specifics might be slightly different.
+</div>
+
+### Logging
+
+Like the previous labs, I strongly encourage you to use logging to help debug your program and understand its flow. Python provides a powerful [logging library](https://docs.python.org/3/howto/logging.html){:target="_blank"}. Spend some time learning it and it will pay off later.
+
 
 ## Objectives
 
 - Learn to build a server.
 
-- Get experience with handling signals.
+- Become familiar with Python network programming.
 
 
 ## Requirements
 
-- No modifications to `tcp_server.h` are allowed.
+- You must use Python 3.9.
 
-- The name of your program must be named `tcp_server`.
+- You **can not use any third party Python libraries** for this lab. If you have to `pip install` or clone any repos, in order to import a library, stop. The only exception is the formatter, [Black](https://github.com/psf/black){:target="_blank"}, which you have to `pip install`. However, you do not use it in your code. 
 
-- `tcp_server` accepts no arguments, and three options, as outlined above.
+- For all socket related tasks, you must only use the [low-level `socket` interface](https://docs.python.org/3/library/socket.html){:target="_blank"} that Python provides. No high-level server socket interfaces are allowed.
+
+- The name of your program must be named `tcp_server.py`.
+
+- `tcp_server.py` accepts no arguments, and three options, as outlined above.
 
 ```
 Usage: tcp_server [--help] [-v] [-p PORT]
@@ -86,10 +122,12 @@ Options:
 
 - Properly shutdown server when an interrupt signal (`ctrl-c`) is sent to your process. If your server is in the middle of sending/receiving to a client, you can let that finish before stopping the server.
 
+- As per the coding standard, you must use the [Black](https://github.com/psf/black){:target="_blank"} formatter.
+
 
 ## Testing
 
-[Netcat](http://netcat.sourceforge.net) is going to be your best friend for this lab. This will allow you to connect directly to your server and test out different input. You can also use the client that you created in lab 1.
+[Netcat](http://netcat.sourceforge.net) is going to be your best friend for this lab. This will allow you to connect directly to your server and test out different input. You can also use the client that you created in lab 3.
 
 
 ## Submission
@@ -99,14 +137,12 @@ To submit your code, push it to your Github repository. Tag the commit you want 
 
 ## Resources
 
-- [Guide on socket programming](https://beej.us/guide/bgnet/html/){:target="_blank"}
+- [socket — Low-level networking interface](https://docs.python.org/3/library/socket.html){:target="_blank"}. Make sure to look at all of the functions available to you.
 
-- [toupper](http://www.cplusplus.com/reference/cctype/toupper/){:target="_blank"}
+- [argparse](https://docs.python.org/3/library/argparse.html){:target="_blank"}.
 
-- [strcpy](https://www.programiz.com/c-programming/library-function/string.h/strcpy){:target="_blank"}
+- [Packing and unpacking binary data in Python](https://docs.python.org/3/library/struct.html){:target="_blank"}.
 
-- [rand](http://www.cplusplus.com/reference/cstdlib/rand/){:target="_blank"}
+- [random](https://docs.python.org/3/library/random.html){:target="_blank"}.
 
-- [Fisher–Yates shuffle](https://en.wikipedia.org/wiki/Fisher–Yates_shuffle){:target="_blank"}
-
-- [Catch Ctrl-C in C](https://stackoverflow.com/questions/4217037/catch-ctrl-c-in-c){:target="_blank"}
+- [Logging HOWTO](https://docs.python.org/3/howto/logging.html){:target="_blank"} and the [Logging interface](https://docs.python.org/3/library/logging.html){:target="_blank"}.
