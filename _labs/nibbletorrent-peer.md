@@ -107,7 +107,7 @@ Now that you have a list of peers, you are ready to make a connection with them 
    
 3. Request pieces of the file from the peer.
 
-You need to be able to support up to 5 concurrent connections with different peers, requesting different parts of of the file. Here is a diagram to roughly outline the algorithm for connecting to peers and requesting pieces of the file:
+You need to be able to support up to **5 concurrent connections with different peers**, requesting different parts of of the file. Here is a diagram to roughly outline the algorithm for connecting to peers and requesting pieces of the file:
 
 <figure class="image mx-auto" style="max-width: 500px">
   <img src="{% link assets/nibble_torrent_request_algorithm.png %}" alt="NibbleTorrent Request Algorithm">
@@ -232,6 +232,8 @@ Since this is such a complicated program, it might be helpful to give you an ove
 - Your application must print the response to `stdout`. All other class norms must be followed (e.g., print errors to `stderr`, correct return codes, etc.).
 
 - You must be able to upload and download data at the same time with other peers.
+
+- You must support up to 5 concurrent connections with different peers.
 
 
 ## Testing
