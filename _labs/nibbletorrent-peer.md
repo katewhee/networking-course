@@ -16,7 +16,7 @@ Use the GitHub Classroom link posted in the Slack channel for the lab to accept 
 
 ## Overview
 
-You will be implementing a simplified version of a BitTorrent peer, called NibbleTorrent. NibbleTorrent is a peer-to-peer protocol, just like BitTorrent, but without the [Bencoded data](https://en.wikipedia.org/wiki/Bencode) and simplified interactions between peers. You will be downloading files using the following procedure:
+You will be implementing a simplified version of a BitTorrent peer, called NibbleTorrent. NibbleTorrent is a peer-to-peer protocol, just like BitTorrent, but without the [Bencoded data](https://en.wikipedia.org/wiki/Bencode){:target="_blank"} and simplified interactions between peers. You will be downloading files using the following procedure:
 
 1. Get a torrent file and parse it. You can download them here.
    
@@ -252,12 +252,12 @@ To submit your code, push it to your Github repository. Tag the commit you want 
 
 ## Resources
 
-- [A good description of how torrents work and how to write a peer in Go.](https://blog.jse.li/posts/torrent/) 
+- [A good description of how torrents work and how to write a peer in Go.](https://blog.jse.li/posts/torrent/){:target="_blank"}
 
-- [SHA-1](https://en.wikipedia.org/wiki/SHA-1) (SHA-1 hashes are always 20 bytes long)
+- [SHA-1](https://en.wikipedia.org/wiki/SHA-1){:target="_blank"} (SHA-1 hashes are always 20 bytes long)
 
-- [Bool array to integer](https://stackoverflow.com/questions/27165607/bool-array-to-integer)
+- [Bool array to integer](https://stackoverflow.com/questions/27165607/bool-array-to-integer){:target="_blank"}
 
-- [Converting int to bytes](https://stackoverflow.com/questions/21017698/converting-int-to-bytes-in-python-3)
+- [Converting int to bytes](https://stackoverflow.com/questions/21017698/converting-int-to-bytes-in-python-3){:target="_blank"}
 
-- [How to get your private IP address](https://pythonguides.com/python-get-an-ip-address/)
+- [How to get your private IP address](https://pythonguides.com/python-get-an-ip-address/){:target="_blank"}
