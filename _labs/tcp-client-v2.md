@@ -10,9 +10,8 @@ repo: https://github.com/byu-ecen426-classroom/tcp_client_v2.git
 
 ## GitHub Classroom
 
-1. Use the GitHub Classroom link posted in the Slack channel for the lab to accept the assignment.
+Use the GitHub Classroom link posted in the Slack channel for the lab to accept the assignment.
 
-2. Use [this template repository]({{ page.repo }}){:target="_blank"} to start the lab.
 
 ## Overview
 For this lab, you will be building off what you did in the previous lab. You will want to use your previous code as a starting point. We will be using the same protocol, but with a minor adjustment. The `Config` `struct` and `tcp_client.h` file have been modified to reflect these changes, so make sure to review these changes.

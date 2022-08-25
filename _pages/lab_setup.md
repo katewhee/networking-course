@@ -41,26 +41,7 @@ My highly opinionated set up involves using [zsh](https://en.wikipedia.org/wiki/
 
 For the labs, we will be using [GitHub Classroom](https://classroom.github.com/classrooms){:target="_blank"}. If you are unfamiliar with Git, now is the time to start learning. VSCode has some Git integrations which will make this easier. 
 
-For each lab, you will be given a link to start the lab. This will automatically create an empty GitHub repo for you for that lab. This is the only way to start and submit the lab! In order for your code to be graded, you must push your code to your repo. 
-
-To start the lab, you can import the boilerplate code that I will give you for each lab through the "Import code" button:
-
-![Screen shot of how to import code]({% link assets/import-code.png %})
-
-Each lab page will have a link to the repo you should uses as your starting point. 
-
-If for some reason, I need to fix a problem with the starter code, you will need a way of pulling those changes down onto your computer. The easiest approach is to create another remote for your git repo. By default, you will have one remote, `origin`, which will point to your GitHub repo. Add another one using the following command:
-
-```
-  git remote add template [URL OF LAB TEMPLATE REPO]
-```
-
-If you ever need to pull down changes I made (I will let you know when this is the case), you can do the following:
-
-```
-git fetch template
-git merge template/master
-```
+For each lab, you will be given a link to start the lab. This will automatically create a GitHub repo for you for that lab. The first three labs have template code for you. This is the only way to start and submit the lab! In order for your code to be graded, you must push your code to your repo.
 
 ## Lab Submission
 
