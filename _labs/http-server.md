@@ -96,6 +96,8 @@ Options:
 
 - Your server needs to be able to return a requested file of any size.
 
+- Your application must print the response to `stdout`. All other class norms must be followed (e.g., print errors to `stderr`, correct return codes, etc.).
+
 
 
 ## Testing

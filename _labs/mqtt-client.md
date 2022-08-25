@@ -35,12 +35,12 @@ We will be going back to our old-faithful protocol. It will work the following w
 
 **Note**: We are trying to fit a request/response protocol into a publisher/subscriber model. Though it happens all the time, it is not ideal and slightly unintuitive. We are doing this to combine something you are familiar with something new. In the last lab, you will see the full power and beauty of a publisher/subscriber protocol.
 
-### CLI
+### Command-line Interface (CLI)
 
 The only arguments for this lab are NetID, action, message. The NetID will be used for the topic that you publish and subscribe to. The action and message will be the same as the previous labs. Similar to earlier labs, your client must take a hostname and port number. The default port number should be 1883, and the default host should be `localhost`. The provided NetID will also be used for the client ID. You must use look something like this usage pattern:
 
 ```
-Usage: mqtt_client [--help] [-v] [-h HOST] [-p PORT] NETID ACTION MESSAGE
+Usage: mqtt_client.py [--help] [-v] [-h HOST] [-p PORT] NETID ACTION MESSAGE
 
 Arguments:
  NETID The NetID of the user.
@@ -73,7 +73,11 @@ Here is a demonstration of the client:
 
 ## Requirements
 
-- You must name your program `mqtt_client.py` and you must provide a [`requirements.txt` file](https://www.idkrtm.com/what-is-the-python-requirements-txt/){:target="_blank"} with all of the dependencies for the lab. In this lab, you are welcome to use any third party library you would like.
+- You must use Python 3.9.
+
+- The only third-party Python library you are allowed to use in this lab is the [Paho MQTT Client library](https://www.eclipse.org/paho/index.php?page=clients/python/docs/index.php). All other third-party libraries are off limits. 
+
+- You must name your program `mqtt_client.py`.
 
 - Your program must have the usage pattern provided above and parse all of the options and arguments correctly.
 
