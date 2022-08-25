@@ -187,19 +187,18 @@ To facilitate the protocol, your peer will need the following pieces of informat
 - The port from which peers can connect to you.
 
 ```
-Usage: peer.py [--help] [-v] [-p PORT] TORRENT_FILE DOWNLOAD_FOLDER
+usage: peer.py [-h] [-p PORT] [-d DEST] [-v] netid torrent_file
 
-Arguments:
- TORRENT_FILE     The torrent file for the file you want to download.
- DOWNLOAD_FOLDER  The folder to download the file to. This is also the
-                  folder you will seed from.
+positional arguments:
+  netid                 Your NetID
+  torrent_file          The torrent file for the file you want to download.
 
-Options:
- --help
- -v, --verbose
- --port PORT, -p PORT
+optional arguments:
+  -h, --help            Show this help message and exit
+  -p PORT, --port PORT  The port to receive peer connections from
+  -d DEST, --dest DEST  The folder to download to and seed from.
+  -v, --verbose         Turn on debugging messages.
 ```
-
 
 ### Program Flow
 
@@ -229,7 +228,7 @@ Since this is such a complicated program, it might be helpful to give you an ove
 
 - Your program must have the usage pattern provided above and parse all of the options and arguments correctly.
 
-- The default port must be `1883`, and the default hostname must be `localhost`.
+- The default port must be `8088`, and the default hostname must be `localhost`.
 
 - Your application must print the response to `stdout`. All other class norms must be followed (e.g., print errors to `stderr`, correct return codes, etc.).
 
