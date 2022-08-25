@@ -15,12 +15,6 @@ repo: https://github.com/byu-ecen426-classroom/nibbletorrent-peer.git
 
 2. Use [this template repository]({{ page.repo }}){:target="_blank"} to start the lab.
 
-# TODO
-
-- Set up tracker
-- Set up peers with only some of the pieces that never have all of the data.
-- This is a hard lab. It requires you to write an TCP server, TCP client, a HTTP client, and a way for all of these threads to communicate with each other.
-
 ## Overview
 
 You will be implementing a simplified version of a BitTorrent peer, called NibbleTorrent. NibbleTorrent is a peer-to-peer protocol, just like BitTorrent, but without the [Bencoded data](https://en.wikipedia.org/wiki/Bencode) and simplified interactions between peers. You will be downloading files using the following procedure:
@@ -30,6 +24,8 @@ You will be implementing a simplified version of a BitTorrent peer, called Nibbl
 2. Make a request to the tracker (listed in the torrent file) to get a list of peers that are seeding that file. I am providing the tracker. By making a request to the tracker, you are adding yourself as a peer for that torrent.
    
 3. Go through the list of peers requesting chunks of the file. During this time, a peer might connect with you and request a piece of the file as well.
+
+A word of caution—this is a hard lab! Essentially, you will be building a TCP server, TCP client, an HTTP client, all running concurrently. You then need to set up a way for these threads to communicate with each other. Give yourself plenty of time to work on this lab!
 
 ## Protocol
 
@@ -65,13 +61,13 @@ Here is an example of a NibbleTorrent file:
 }
 ```
 
-The torrent files you will be working with are located here.
+The torrent files you will be working with are located here. [TODO: Add torrent files]
 
 ### Tracker
 
 After you have parsed the torrent file, you must make a request to the `tracker_url` to get a list of peers to download the file from. The tracker uses HTTP and parameters are passed using [query strings](https://en.wikipedia.org/wiki/Query_string). You must pass the following parameters:
 
-- `peer_id`: This is an ID that uniquely identifies yourself. It needs to following this format: `-ECEN426-<NetID>-<5 random characters>`. For example, a peer ID would look like `-ECEN426-philipbl-tkv9s`.
+- `peer_id`: This is an ID that uniquely identifies yourself. It needs to following this format: `-ECEN426-<NetID>`. For example, a peer ID would look like `-ECEN426-le0nh4rt`.
 
 - `ip`: The IP address you will want to receive peer connection to. Because the tracker will only live on BYU campus, you will want to use your BYU private IP address.
 
@@ -96,8 +92,8 @@ An example of the payload the tracker return:
 {
     "interval": 30,
     "peers": [
-        "10.35.120.175:6981",
-        "10.35.120.88:6977"
+        ["10.35.120.175:6981", "-ECEN426-le0nh4rt"],
+        ["10.35.120.88:6977", "-ECEN426-rinoa"]
     ]
 }
 ```
@@ -178,12 +174,76 @@ If a peer sends a malformed request or an error occurs on the responding peer, t
 
 `50 69 65 63 65 20 69 6e 64 65 78 20 6f 75 74 20 6f 66 20 72 61 6e 67 65` is hex for "Piece index out of range".
 
+## Command-line Interface (CLI)
+
+To facilitate the protocol, your peer will need the following pieces of information:
+
+- Torrent file. This specifies what file you want to download and information about the tracker for that file.
+  
+- Your NetID. Based on your NetID, your client ID will be generated.
+  
+- The folder that you want to download the file to. For simplicity, this will also be the folder where you upload data from when you are seeding.
+
+- The port from which peers can connect to you.
+
+```
+Usage: peer.py [--help] [-v] [-p PORT] TORRENT_FILE DOWNLOAD_FOLDER
+
+Arguments:
+ TORRENT_FILE     The torrent file for the file you want to download.
+ DOWNLOAD_FOLDER  The folder to download the file to. This is also the
+                  folder you will seed from.
+
+Options:
+ --help
+ -v, --verbose
+ --port PORT, -p PORT
+```
+
+
+## Program Flow
+
+Since this is such a complicated program, it might be helpful to give you an overall flow of the program:
+
+1. Start your peer by spawn the necessary threads.
+2. Download the file you need to download. To do this, you will need to periodically check with the tracker to get a list of peers.
+3. While you are downloading, you must also be able to upload data to other peers.
+4. Once the file has been downloaded, save it to the folder that was specified by the user.
+5. Continue to seed your data to other peers.
+
 
 ## Objectives
 
+- Get experience building a peer to peer network.
+
+- Combine many of the components from previous labs into one system.
+  
+
 ## Requirements
 
+- You must use Python 3.9.
+
+- The only third-party Python library you are allowed to use in this lab is the [requests](https://requests.readthedocs.io/en/latest/). That way you don't have to write your own HTTP client. All other third-party libraries are off limits.
+
+- You must name your program `peer.py`.
+
+- Your program must have the usage pattern provided above and parse all of the options and arguments correctly.
+
+- The default port must be `1883`, and the default hostname must be `localhost`.
+
+- Your application must print the response to `stdout`. All other class norms must be followed (e.g., print errors to `stderr`, correct return codes, etc.).
+
+- You must be able to upload and download data at the same time with other peers.
+
+
 ## Testing
+
+This is a big program, but you can make testing easier by breaking it into smaller chunks. Feel free to add additional commandline options that let you test specific components of your lab. For example, first test the upload component, then independently test the download part. Finally test all of the parts together.
+
+The tracker provides the the IP address and client ID of each peer. It is a requirement for your lab to work with other people's peers, but you can temporarily restrict which peers you connect with for testing purposes.
+
+I will provide a few peers that will upload and download. Their client IDs will be `-ECEN426-bot*`, where `*` can be zero or more characters.
+
 
 ## Submission
 
@@ -200,18 +260,3 @@ To submit your code, push it to your Github repository. Tag the commit you want 
 - https://stackoverflow.com/questions/27165607/bool-array-to-integer
 
 - https://stackoverflow.com/questions/21017698/converting-int-to-bytes-in-python-3
-  
-<!-- 
-https://erdgeist.org/arts/software/opentracker/#invocation
-
-https://hub.docker.com/r/lednerb/opentracker-docker/#!
-
-https://github.com/Lednerb/opentracker-docker/
-
-https://stackoverflow.com/questions/4072234/bittorrent-tracker-request-format-of-info-hash
-
-https://wiki.theory.org/BitTorrentSpecification
-
-https://markuseliasson.se/article/bittorrent-in-python/
-
-https://github.com/eliasson/pieces/ -->
