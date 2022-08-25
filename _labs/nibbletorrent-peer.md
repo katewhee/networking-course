@@ -61,7 +61,7 @@ Here is an example of a NibbleTorrent file:
 }
 ```
 
-The torrent files you will be working with are located here. [TODO: Add torrent files]
+The torrent files you will be working with are located [here]({% link assets/torrents.zip %}).
 
 ### Tracker
 
