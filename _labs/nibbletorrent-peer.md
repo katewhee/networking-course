@@ -27,11 +27,11 @@ You will be implementing a simplified version of a BitTorrent peer, called Nibbl
 
 A word of caution—this is a hard lab! Essentially, you will be building a TCP server, TCP client, an HTTP client, all running concurrently. You then need to set up a way for these threads to communicate with each other. Give yourself plenty of time to work on this lab!
 
-## Protocol
+### Protocol
 
 Below outlines the specifics of the data formats and how requests/responses should be formatted to download a file using NibbleTorrent.
 
-### Torrent File
+#### Torrent File
 
 You will need to parse the torrent file to get the necessary tracker information. The torrent file is a **JSON file** with the following keys:
 
@@ -63,7 +63,7 @@ Here is an example of a NibbleTorrent file:
 
 The torrent files you will be working with are located [here]({% link assets/torrents.zip %}).
 
-### Tracker
+#### Tracker
 
 After you have parsed the torrent file, you must make a request to the `tracker_url` to get a list of peers to download the file from. The tracker uses HTTP and parameters are passed using [query strings](https://en.wikipedia.org/wiki/Query_string). You must pass the following parameters:
 
@@ -78,13 +78,13 @@ After you have parsed the torrent file, you must make a request to the `tracker_
 Using the example from above, your request would look like:
 
 ```
-GET http://ecenetworking-server.et.byu.edu:6969/announce?peer_id=ECEN426-philipbl-tkv9s&ip=10.35.120.175&port=6981&torrent_id=84e199cad6b953eee0c9b6d8b72612ddb2488999 HTTP/1.1
+GET http://ecenetworking-server.et.byu.edu:6969/announce?peer_id=ECEN426-le0nh4rt&ip=10.35.120.175&port=6981&torrent_id=84e199cad6b953eee0c9b6d8b72612ddb2488999 HTTP/1.1
 ```
 When you make this request with a valid peer ID, IP address, port, and torrent ID, the tracker will return a JSON payload with the following keys:
 
 - `interval`: The interval (in seconds) that you must send a request to the tracker in order to be considered a peer.
 
-- `peers`: A list of all peers that are seeding the torrent.
+- `peers`: A list of all peers that are seeding the torrent. Each item in the list is a pair of items, with the IP address of the peer and the first item and the client ID of the peer as the second item.
 
 An example of the payload the tracker return:
 
@@ -98,7 +98,7 @@ An example of the payload the tracker return:
 }
 ```
 
-### Peer Connections
+#### Peer Connections
 
 Now that you have a list of peers, you are ready to make a connection with them and start downloading chunks of the file. This is done in three parts:
 
@@ -112,10 +112,10 @@ You need to be able to support up to 5 concurrent connections with different pee
 
 <figure class="image mx-auto" style="max-width: 500px">
   <img src="{% link assets/nibble_torrent_request_algorithm.png %}" alt="NibbleTorrent Request Algorithm">
-  <figcaption style="text-align: center;">Adapted from <a href="https://blog.jse.li/posts/torrent/">here</a>.</figcaption>
+  <figcaption style="text-align: center;">Figure adapted from <a href="https://blog.jse.li/posts/torrent/">here</a>.</figcaption>
 </figure>
 
-### NibbleTorrent Request/Response Format
+#### NibbleTorrent Request/Response Format
 
 Peers need to communicate with each other to request parts of a file. For this communication, the following general data format will be used:
 
@@ -134,7 +134,7 @@ Peers need to communicate with each other to request parts of a file. For this c
 The peer you right must be able to **send and receive** all NibbleTorrent requests.
 
 
-#### Hello Request and Response
+##### Hello Request and Response
 
 After you connected to a peer, you will send them a hello request, with the type field value of `0x01`. This request will ensure that you both are using the same protocol and that the peer actually has the file that you are trying to download. The payload of the request is the torrent ID in binary format. For example, a request might look like this (displayed in hex format):
 
@@ -150,7 +150,7 @@ Using the previous example (torrent ID 84e199cad6b953eee0c9b6d8b72612ddb2488999,
 01 02 00 01 c0
 ```
 
-#### Piece Request/Response
+##### Piece Request/Response
 
 Once you have connected with a peer, sent a hello request, and received a hello response, you are ready to request pieces. This is done by sending a request with type 0x03 and with a payload of the index of the piece you are requesting. For example, if you wanted to request the third piece of a file, you would send this request:
 
@@ -164,7 +164,7 @@ The responding peer will then send the data using the piece response type (0x04)
 01 04 10 00 ...piece data...
 ```
 
-#### Error Response
+##### Error Response
 
 If a peer sends a malformed request or an error occurs on the responding peer, then the peer will respond with an error response message (0x05). The payload of this message is ASCII text describing what went wrong. For example if a peer requested a piece that was outside of the range of pieces, the responding peer could respond with "Piece index out of range" error message. It would look like:
 
@@ -174,7 +174,7 @@ If a peer sends a malformed request or an error occurs on the responding peer, t
 
 `50 69 65 63 65 20 69 6e 64 65 78 20 6f 75 74 20 6f 66 20 72 61 6e 67 65` is hex for "Piece index out of range".
 
-## Command-line Interface (CLI)
+### Command-line Interface (CLI)
 
 To facilitate the protocol, your peer will need the following pieces of information:
 
@@ -201,7 +201,7 @@ Options:
 ```
 
 
-## Program Flow
+### Program Flow
 
 Since this is such a complicated program, it might be helpful to give you an overall flow of the program:
 
@@ -252,11 +252,12 @@ To submit your code, push it to your Github repository. Tag the commit you want 
 
 ## Resources
 
-- https://blog.jse.li/posts/torrent/
+- [A good description of how torrents work and how to write a peer in Go.](https://blog.jse.li/posts/torrent/) 
 
-- https://en.wikipedia.org/wiki/SHA-1
-  - SHA-1 hashes are always 20 bytes long.
+- [SHA-1](https://en.wikipedia.org/wiki/SHA-1) (SHA-1 hashes are always 20 bytes long)
 
-- https://stackoverflow.com/questions/27165607/bool-array-to-integer
+- [Bool array to integer](https://stackoverflow.com/questions/27165607/bool-array-to-integer)
 
-- https://stackoverflow.com/questions/21017698/converting-int-to-bytes-in-python-3
+- [Converting int to bytes](https://stackoverflow.com/questions/21017698/converting-int-to-bytes-in-python-3)
+
+- [How to get your private IP address](https://pythonguides.com/python-get-an-ip-address/)
