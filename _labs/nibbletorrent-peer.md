@@ -119,7 +119,14 @@ You need to be able to support up to **5 concurrent connections with different p
 Peers need to communicate with each other to request parts of a file. For this communication, the following general data format will be used:
 
 ```
-{% sh monodraw assets/nibbleTorrent_request_format.monopic %}
+ 0                   1                   2                   3   
+ 0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1 
++-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
+|    Version    |     Type      |            Length             |
++---------------+---------------+-------------------------------+
+|                          ...Data...                           |
+|                       (variable length)                       |
++---------------------------------------------------------------+
 ```
 
 - **Version**: This field is 8 bits and will always be `0x01`. This allows clients to support future versions of the protocol where the format might be different.
