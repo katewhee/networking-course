@@ -5,6 +5,15 @@ title: Overview
 icon: fas fa-chalkboard-teacher
 ---
 
+## Course Content
+
+This course covers the networking stack using a top-down approach. We start with some networking principles, then traverse the networking stack, skipping over the physical layer, and cover some special topics related to networking.
+
+<figure class="image mx-auto" style="max-width: 400px">
+  <img src="{% link assets/units_and_tests.png %}" alt="Units of the course.">
+  <figcaption style="text-align: center;">Structure of the class from top to bottom.</figcaption>
+</figure>
+
 ## Course Makeup
 
 This course is made up of three major components:
