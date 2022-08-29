@@ -18,7 +18,7 @@ This course covers the networking stack using a top-down approach. We start with
 
 This course is made up of three major components:
 
-- **Labs**. Labs will generally be due every week on Fridays. Occasionally, you get an extra week for a lab when you are implementing a new concept. Labs are turned in through Github. For every lab, there is also a feedback component. This feedback gives you a chance to tell me what you liked and did not like about the lab so that I can improve the labs for future years. Writing good code, and not code that works, is an important part of this class. To help facilitate better code craftsmanship, you will be meeting with randomly selected groups three times throughout the semester. This meeting will give you a chance to talk about the problems you faced and show each other how you implemented the lab. The point of this exercise is to learn from each other. These craftsmanship meetings will be a small part of your grade.
+- **Labs**. Labs will generally be due every week on Fridays. Occasionally, you get an extra week for a lab when you are implementing a new concept. Labs are turned in through Github. For every lab, there is also a feedback component. This feedback gives you a chance to tell me what you liked and did not like about the lab so that I can improve the labs for future years. Writing good code, and not code that works, is an important part of this class. To help facilitate better code craftsmanship, you will be meeting with randomly selected groups two times throughout the semester. This meeting will give you a chance to talk about the problems you faced and show each other how you implemented the lab. The point of this exercise is to learn from each other. These craftsmanship meetings will be a small part of your grade.
 
 - **Homeworks**. Homeworks are due one week after the unit's material is covered. They will cover information from the lecture and book. They will typically consist of problems from the textbook and a [Wireshark lab](https://gaia.cs.umass.edu/kurose_ross/wireshark.htm){:target="_blank"}, where you get hands-on experience with protocols using [Wireshark](https://www.wireshark.org){:target="_blank"}. The Wireshark labs can be pretty tedious, so rather than submitting endless screenshots and meaningless packet information, you will be doing the Wireshark labs based on the honor system. Do the Wireshark lab and indicate that you have done them on your homework—that's the only proof I need.
 
@@ -49,7 +49,7 @@ All communication will be done over Slack. Slack is intended to be used for anno
 This is a senior-level class, and I expect senior-level participation. I expect all students to attend every lecture and be engaged in the lecture. Asking and answering questions in class is essential. When you are in a lecture, I expect your attention, so students should not be on their phones or doing non-class related things on laptops.
 
 ## Late Policy
-Don't be late. For all homework assignments, 20% of the grade will be subtracted for each day late, not including weekends. There is no grade penalty for labs, but if you get too far behind, it will be hard to catch up. For any lab turned in late, I can not guarantee when I will grade it, so any mistake you make in a earlier lab might be compounded over multiple labs.
+Don't be late. For all homework assignments, 20% of the grade will be subtracted for each day late, not including weekends. There is no grade penalty for late labs, but if you get too far behind, it will be hard to catch up. For any lab turned in late, I can not guarantee when I will grade it, so any mistake you make in a earlier lab might be compounded over multiple labs. Just don't turn them in late!
 
 ## Source Code Sharing
 No source code should be shared between students. Students can work on assignments together, but no direct or indirect copying from another student is allowed. This class will use a code similarity checker to determine if students are copying code.
@@ -57,8 +57,6 @@ No source code should be shared between students. Students can work on assignmen
 ## Policies
 
 ### COVID-19 Statement
-While COVID-19 conditions persist and until further notice, students and faculty are required to wear face coverings at all times during class; faculty are not at liberty to waive this expectation.
-
 Students who feel sick, including exhibiting symptoms commonly associated with COVID 19 (fever; cough; shortness of breath/difficulty breathing; chills; muscle pain; sore throat; new loss of taste or smell; etc.) should not attend class and should work with their instructor to develop a study plan for the duration of the illness.
 
 ### Honor Code
