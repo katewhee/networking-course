@@ -22,7 +22,7 @@ There are two parts to this project, the HTTP parsing and CLI.
 ### HTTP Parsing
 Assuming you did the previous lab correctly, you will need to modify the logic that parses a request and builds a response—all of the TCP related logic can stay the same. The HTTP request and response format are pure ASCII, so a lot of the work and tooling you have built around parsing the other protocol still apply.
 
-For your server, your responses will be in `HTTP/1.0`. I've provided a small demo webpage in the `www` folder of the lab.
+For your server, your responses will be in `HTTP/1.0`. I've provided a small demo webpage in the `www` folder of the lab. As part of parsing the HTTP request, you must parse all of the headers of the request as well.
 
 ### Command-line Interface (CLI)
 
@@ -32,7 +32,7 @@ Only two modifications need to be made to the CLI of your server from the previo
 python http_server.py -f ./www
 ```
 
-Then all requests would be relative to the `www` folder. The previous request would try to access a file at `www/test.jpg`. The second change you need to make is adding a `--delay` flag. This will purposely delay the handling of a HTTP request for 5 seconds. This flag is purely to help with testing your code and has no real-world benefit. 
+Then all requests would be relative to the `www` folder. The previous request would try to access a file at `www/test.jpg`. The second change you need to make is adding a `--delay` flag. This flag needs to purposely delay the handling of a HTTP request for 5 seconds. This flag is purely to help with testing your code and has no real-world benefit. 
 
 Here is a demonstration of the server:
 
@@ -81,19 +81,19 @@ Options:
 
 - When the delay option is set, your server must wait 5 second after receiving an HTTP request before sending a response.
 
-- Your server must be able to *parse all request types* (`POST`, `PUT`, etc.); however, you only need to service `GET` requests. If a request type other than `GET` is received, you must return a `405 Method Not Allowed` response. 
+- Your server must be able to *parse all request types* (`GET`, `POST`, `PUT`, etc.); however, you only need to service `GET` requests. If a request type other than `GET` is received, you must return a `405 Method Not Allowed` response. 
 
 - Your server must parse *all* HTTP headers in a request.
 
 - You are only required to respond with one header, `Content-Length`, which contains the size of the response file. You are welcome to support other response headers, such as `Content-Type`, `Last-Modified`, etc.
 
-- Your server must be able to serve a webpage to Chrome.
+- Your server must be able to serve a webpage with multiple resources to Chrome.
 
 - If a request for a file does not exist, a proper error message must be returned (`404 File Not Found`) with an error webpage. I've provided `404.html`, but you are welcome to use your own.
 
-- If any other error occurs, the [appropriate error code/message](https://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html){:target="_blank"} must be returned.
+- If any other error occurs, the [appropriate error code/message](https://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html){:target="_blank"} must be returned. **This includes dealing with malformed HTTP requests.**
 
-- Your server needs to be able to return a requested file of any size.
+- Your server needs to be able to return a requested file of any size. Take special care on how you read the file from disk. You probably can't fit a 1 TB file into memory, so how can you serve a file that big?
 
 - Your application must print the response to `stdout`. All other class norms must be followed (e.g., print errors to `stderr`, correct return codes, etc.).
 
@@ -118,3 +118,7 @@ To submit your code, push it to your Github repository. Tag the commit you want 
 - HTTP
   - [HTTP Specification](https://tools.ietf.org/html/rfc7230){:target="_blank"}
   - [Wikipedia](https://en.wikipedia.org/wiki/Hypertext_Transfer_Protocol#Message_format){:target="_blank"}
+
+- [How to get file size in Python?](https://www.geeksforgeeks.org/how-to-get-file-size-in-python/)
+
+- [How to read big file in Python](https://www.iditect.com/guide/python/python_howto_read_big_file_in_chunks.html)
