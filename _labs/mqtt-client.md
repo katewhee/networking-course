@@ -72,7 +72,7 @@ Here is a demonstration of the client:
 
 ## Requirements
 
-- You must use Python 3.9.
+- You must use Python 3.8+.
 
 - The only third-party Python library you are allowed to use in this lab is the [Paho MQTT Client library](https://www.eclipse.org/paho/index.php?page=clients/python/docs/index.php). All other third-party libraries are off limits. 
 

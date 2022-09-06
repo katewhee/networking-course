@@ -54,7 +54,7 @@ Here is a demonstration of the server:
 
 ## Requirements
 
-- You must use Python 3.9.
+- You must use Python 3.8+.
 
 - You **can not use any third party Python libraries** for this lab. If you have to `pip install` or clone any repos, in order to import a library, stop. The only exception is the formatter, [Black](https://github.com/psf/black){:target="_blank"}, which you have to `pip install`. However, you do not use it in your code. 
 

@@ -226,7 +226,7 @@ Since this is such a complicated program, it might be helpful to give you an ove
 
 ## Requirements
 
-- You must use Python 3.9.
+- You must use Python 3.8+.
 
 - The only third-party Python library you are allowed to use in this lab is the [requests](https://requests.readthedocs.io/en/latest/). That way you don't have to write your own HTTP client. All other third-party libraries are off limits.
 
