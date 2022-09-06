@@ -115,9 +115,9 @@ To submit your code, push it to your Github repository. Tag the commit you want 
 
 ## Resources
 
-- HTTP
-  - [HTTP Specification](https://tools.ietf.org/html/rfc7230){:target="_blank"}
-  - [Wikipedia](https://en.wikipedia.org/wiki/Hypertext_Transfer_Protocol#Message_format){:target="_blank"}
+- [HTTP Specification](https://tools.ietf.org/html/rfc7230){:target="_blank"}
+
+- [HTTP Wikipedia Article](https://en.wikipedia.org/wiki/Hypertext_Transfer_Protocol#Message_format){:target="_blank"}
 
 - [How to get file size in Python?](https://www.geeksforgeeks.org/how-to-get-file-size-in-python/)
 
