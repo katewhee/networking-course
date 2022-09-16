@@ -89,7 +89,7 @@ Run the benchmark **3 or more times** and report the best run. You should turn o
 
 ## Extra Credit
 
-For extra credit, you can implement and **benchmark** a thread pool, a process pool, and/or use the Async I/O library in Python. Python has implementations of thread pools and process pools, but you must implement these yourself to get the credit. For the Async I/O, you will need to import 
+For extra credit, you can implement and **benchmark** a thread pool, a process pool, and/or use the Async I/O library in Python. Python has implementations of thread pools and process pools, but you must implement these yourself to get the credit. For the Async I/O, you will need to import the [asyncio](https://docs.python.org/3/library/asyncio.html) module.
 
 - Thread Pool: 5%
 - Process Pool: 5%
