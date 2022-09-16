@@ -117,6 +117,10 @@ I will also be running a TCP server at `ecenetworking-server.et.byu.edu:8080`. T
 
 <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/Kfmsi_WCd74" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
+<div class="alert alert-warning" style="width: 560px" role="alert">
+  The hostname of the lab server has changed. Instead of <code>lundrigan.byu.edu</code> it is <code>ecenetworking-server.et.byu.edu</code>.
+</div>
+
 
 ## Submission
 
