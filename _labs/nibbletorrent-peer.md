@@ -64,7 +64,7 @@ The torrent files you will be working with are located [here]({% link assets/tor
 
 #### Tracker
 
-After you have parsed the torrent file, you must make a request to the `tracker_url` to get a list of peers to download the file from. The tracker uses HTTP and parameters are passed using [query strings](https://en.wikipedia.org/wiki/Query_string). You must pass the following parameters:
+After you have parsed the torrent file, you must make a request to the `tracker_url` to get a list of peers to download the file from. The tracker uses HTTP and parameters are passed using [query strings](https://en.wikipedia.org/wiki/Query_string){:target="_blank"}. You must pass the following parameters:
 
 - `peer_id`: This is an ID that uniquely identifies yourself. It needs to following this format: `-ECEN426-<NetID>`. For example, a peer ID would look like `-ECEN426-le0nh4rt`.
 
@@ -140,7 +140,7 @@ Peers need to communicate with each other to request parts of a file. For this c
 The peer you right must be able to **send and receive** all NibbleTorrent requests.
 
 
-##### Hello Request and Response
+##### Hello Request/Response
 
 After you connected to a peer, you will send them a hello request, with the type field value of `0x01`. This request will ensure that you both are using the same protocol and that the peer actually has the file that you are trying to download. The payload of the request is the torrent ID in binary format. For example, a request might look like this (displayed in hex format):
 
@@ -200,8 +200,8 @@ positional arguments:
   torrent_file          The torrent file for the file you want to download.
 
 optional arguments:
-  -h, --help            Show this help message and exit
-  -p PORT, --port PORT  The port to receive peer connections from
+  -h, --help            Show this help message and exit.
+  -p PORT, --port PORT  The port to receive peer connections from.
   -d DEST, --dest DEST  The folder to download to and seed from.
   -v, --verbose         Turn on debugging messages.
 ```
@@ -228,7 +228,7 @@ Since this is such a complicated program, it might be helpful to give you an ove
 
 - You must use Python 3.8+.
 
-- The only third-party Python library you are allowed to use in this lab is the [requests](https://requests.readthedocs.io/en/latest/). That way you don't have to write your own HTTP client. All other third-party libraries are off limits.
+- The only third-party Python library you are allowed to use in this lab is [requests](https://requests.readthedocs.io/en/latest/). That way you don't have to write your own HTTP client. All other third-party libraries are off limits.
 
 - You must name your program `peer.py`.
 
