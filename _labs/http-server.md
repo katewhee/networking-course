@@ -6,7 +6,7 @@ repo: https://github.com/byu-ecen426-classroom/http_server.git
 
 > Computer Science is no more about computers than astronomy is about telescopes.
 > 
-> [Edsger W. Dijkstra](https://en.wikipedia.org/wiki/Edsger_W._Dijkstra){:target="_blank"}
+> [Edsger W. Dijkstra](https://en.wikipedia.org/wiki/Edsger_W._Dijkstra)
 
 ## GitHub Classroom
 
@@ -56,9 +56,9 @@ Here is a demonstration of the server:
 
 - You must use Python 3.8+.
 
-- You **can not use any third party Python libraries** for this lab. If you have to `pip install` or clone any repos, in order to import a library, stop. The only exception is the formatter, [Black](https://github.com/psf/black){:target="_blank"}, which you have to `pip install`. However, you do not use it in your code. 
+- You **can not use any third party Python libraries** for this lab. If you have to `pip install` or clone any repos, in order to import a library, stop. The only exception is the formatter, [Black](https://github.com/psf/black), which you have to `pip install`. However, you do not use it in your code. 
 
-- For all socket related tasks, you must only use the [low-level `socket` interface](https://docs.python.org/3/library/socket.html){:target="_blank"} that Python provides. No high-level server socket interfaces are allowed.
+- For all socket related tasks, you must only use the [low-level `socket` interface](https://docs.python.org/3/library/socket.html) that Python provides. No high-level server socket interfaces are allowed.
 
 - The name of your program must be named `http_server.py`.
 
@@ -91,7 +91,7 @@ Options:
 
 - If a request for a file does not exist, a proper error message must be returned (`404 File Not Found`) with an error webpage. I've provided `404.html`, but you are welcome to use your own.
 
-- If any other error occurs, the [appropriate error code/message](https://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html){:target="_blank"} must be returned. **This includes dealing with malformed HTTP requests.**
+- If any other error occurs, the [appropriate error code/message](https://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html) must be returned. **This includes dealing with malformed HTTP requests.**
 
 - Your server needs to be able to return a requested file of any size. Take special care on how you read the file from disk. You probably can't fit a 1 TB file into memory, so how can you serve a file that big?
 
@@ -101,7 +101,7 @@ Options:
 
 ## Testing
 
-You can follow the same tools as the previous lab. You can also add [httpie](https://httpie.org){:target="_blank"} or [curl](https://curl.haxx.se){:target="_blank"} to your repertoire. They will create a valid HTTP request for you to test your server against. Once you have refined your lab, you can use a web browser to make sure your response is well-formed, and the data you are returning is correct.
+You can follow the same tools as the previous lab. You can also add [httpie](https://httpie.org) or [curl](https://curl.haxx.se) to your repertoire. They will create a valid HTTP request for you to test your server against. Once you have refined your lab, you can use a web browser to make sure your response is well-formed, and the data you are returning is correct.
 
 **Warning**: Chrome has a weird behavior where it will sometimes set up a TCP connection with your server but then not send anything. This TCP connection will cause your server to block, waiting for an HTTP request. I'm not sure why Chrome does this, but it is probably related to performance enhancements and anticipating another HTTP request might be sent. Either way, don't worry about this case since it is a Chrome-specific issue.
 
@@ -115,9 +115,9 @@ To submit your code, push it to your Github repository. Tag the commit you want 
 
 ## Resources
 
-- [HTTP Specification](https://tools.ietf.org/html/rfc7230){:target="_blank"}
+- [HTTP Specification](https://tools.ietf.org/html/rfc7230)
 
-- [HTTP Wikipedia Article](https://en.wikipedia.org/wiki/Hypertext_Transfer_Protocol#Message_format){:target="_blank"}
+- [HTTP Wikipedia Article](https://en.wikipedia.org/wiki/Hypertext_Transfer_Protocol#Message_format)
 
 - [How to get file size in Python?](https://www.geeksforgeeks.org/how-to-get-file-size-in-python/)
 

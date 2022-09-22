@@ -6,7 +6,7 @@ repo: https://github.com/byu-ecen426-classroom/mqtt_client.git
 
 > Programs must be written for people to read, and only incidentally for machines to execute.
 > 
-> [Harold Abelson](https://en.wikipedia.org/wiki/Hal_Abelson){:target="_blank"}
+> [Harold Abelson](https://en.wikipedia.org/wiki/Hal_Abelson)
 
 ## GitHub Classroom
 
@@ -15,7 +15,7 @@ Use the GitHub Classroom link posted in the Slack channel for the lab to accept 
 
 ## Overview
 
-You will be writing an [MQTT](https://mqtt.org){:target="_blank"} client in Python. MQTT is a different type of application layer protocol from what you have seen in the past. It will be worth your time to understand how it works before you dive into implementing a client. We discussed it in lecture, but it is worth reading some [articles](https://www.hivemq.com/blog/how-to-get-started-with-mqtt/){:target="_blank"} and/or watching some [videos](https://youtu.be/LKz1jYngpcU){:target="_blank"}. It is a fairly complex protocol when you get into the details of how it works.
+You will be writing an [MQTT](https://mqtt.org) client in Python. MQTT is a different type of application layer protocol from what you have seen in the past. It will be worth your time to understand how it works before you dive into implementing a client. We discussed it in lecture, but it is worth reading some [articles](https://www.hivemq.com/blog/how-to-get-started-with-mqtt/) and/or watching some [videos](https://youtu.be/LKz1jYngpcU). It is a fairly complex protocol when you get into the details of how it works.
 
 To use MQTT, you need a couple of pieces of information:
 
@@ -30,7 +30,7 @@ We will not be using a username and password for this lab.
 
 ### Protocol
 
-We will be going back to our old-faithful protocol. It will work the following way: A client will publish a message with a topic set to `<netid>/<action>/request`. The payload of the message will be the text you want to transform. For example, if you want to uppercase the text, "Networking is the best!" and your NetID is [le0nh4rt](https://en.wikipedia.org/wiki/Squall_Leonhart){:target="_blank"}, then you would publish to the topic `le0nh4rt/uppercase/request` and the message would be "Networking is the best!". Your client must subscribe to the topic `<netid>/<action>/response`. Using the previous example, you would subscribe to `le0nh4rt/uppercase/response` to get the response, which would be "NETWORKING IS THE BEST!".
+We will be going back to our old-faithful protocol. It will work the following way: A client will publish a message with a topic set to `<netid>/<action>/request`. The payload of the message will be the text you want to transform. For example, if you want to uppercase the text, "Networking is the best!" and your NetID is [le0nh4rt](https://en.wikipedia.org/wiki/Squall_Leonhart), then you would publish to the topic `le0nh4rt/uppercase/request` and the message would be "Networking is the best!". Your client must subscribe to the topic `<netid>/<action>/response`. Using the previous example, you would subscribe to `le0nh4rt/uppercase/response` to get the response, which would be "NETWORKING IS THE BEST!".
 
 **Note**: We are trying to fit a request/response protocol into a publisher/subscriber model. Though it happens all the time, it is not ideal and slightly unintuitive. We are doing this to combine something you are familiar with something new. In the last lab, you will see the full power and beauty of a publisher/subscriber protocol.
 
@@ -91,7 +91,7 @@ Here is a demonstration of the client:
 
 I have provided an MQTT broker at ecenetworking-server.et.byu.edu:1883. You can use it to test your client. 
 
-You can also install [`mosquitto`](https://mosquitto.org){:target="_blank"}, a popular open-source MQTT broker. Using mosquitto, you can test locally on your machine. You might consider installing `mosquitto-clients`, which gives you [`mosquitto_pub`](https://mosquitto.org/man/mosquitto_pub-1.html){:target="_blank"} and [`mosuquitto_sub`](https://mosquitto.org/man/mosquitto_sub-1.html){:target="_blank"}, which are clients to publish and subscribe with.
+You can also install [`mosquitto`](https://mosquitto.org), a popular open-source MQTT broker. Using mosquitto, you can test locally on your machine. You might consider installing `mosquitto-clients`, which gives you [`mosquitto_pub`](https://mosquitto.org/man/mosquitto_pub-1.html) and [`mosuquitto_sub`](https://mosquitto.org/man/mosquitto_sub-1.html), which are clients to publish and subscribe with.
 
 
 ## Submission
@@ -101,10 +101,10 @@ To submit your code, push it to your Github repository. Tag the commit you want 
 
 ## Resources
 
-- [argparse](https://docs.python.org/3/library/argparse.html){:target="_blank"} or [click](https://click.palletsprojects.com/en/8.0.x/){:target="_blank"}
-- [Paho MQTT Python client](https://www.eclipse.org/paho/index.php?page=clients/python/docs/index.php){:target="_blank"}
-- [Paho MQTT Python client publication example](https://github.com/eclipse/paho.mqtt.python/blob/master/examples/client_pub-wait.py){:target="_blank"}
-- [Paho MQTT Python client subscription example](https://github.com/eclipse/paho.mqtt.python/blob/master/examples/client_sub.py){:target="_blank"}
+- [argparse](https://docs.python.org/3/library/argparse.html) or [click](https://click.palletsprojects.com/en/8.0.x/)
+- [Paho MQTT Python client](https://www.eclipse.org/paho/index.php?page=clients/python/docs/index.php)
+- [Paho MQTT Python client publication example](https://github.com/eclipse/paho.mqtt.python/blob/master/examples/client_pub-wait.py)
+- [Paho MQTT Python client subscription example](https://github.com/eclipse/paho.mqtt.python/blob/master/examples/client_sub.py)
 - [Python logging](https://realpython.com/python-logging/)
 - [Printing to `stderr` in Python](https://stackoverflow.com/questions/5574702/how-to-print-to-stderr-in-python)
 

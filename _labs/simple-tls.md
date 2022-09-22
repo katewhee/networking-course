@@ -6,7 +6,7 @@ repo: https://github.com/byu-ecen426-classroom/simple_tls.git
 
 > It's hard enough to find an error in your code when you're looking for it; it's even harder when you've assumed your code is error-free.
 > 
-> [Steve McConnell](https://en.wikipedia.org/wiki/Steve_McConnell){:target="_blank"}
+> [Steve McConnell](https://en.wikipedia.org/wiki/Steve_McConnell)
 
 
 ## GitHub Classroom

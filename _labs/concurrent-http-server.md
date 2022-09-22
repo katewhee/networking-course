@@ -6,7 +6,7 @@ repo: https://github.com/byu-ecen426-classroom/concurrent_http_server.git
 
 > Controlling complexity is the essence of computer programming.
 > 
-> [Brian Kernighan](https://en.wikipedia.org/wiki/Brian_Kernighan){:target="_blank"}
+> [Brian Kernighan](https://en.wikipedia.org/wiki/Brian_Kernighan)
 
 ## GitHub Classroom
 
@@ -17,7 +17,7 @@ Use the GitHub Classroom link posted in the Slack channel for the lab to accept 
 
 For this lab, you will be extending your HTTP server to handle multiple clients _at once_. The rest of your server will stay the same. There are multiple ways of supporting multiple clients. A typical approach is to spawn a new thread or process for each client that connects. That thread or process is responsible for communicating with a specific client. There is another approach that uses a system call (`poll` or `select`) to determine which sockets are ready to receive data from or write data to. Since with socket programming, most of the time your program is waiting around for the sockets to send or receive data, this allows your program to handle multiple sockets at once. Instead of creating a new thread or process for each client socket, one process keeps track of many sockets at once.
 
-For this lab, you are required to implement a concurrent server in two ways: using threads and using processes. When a new request comes in, a thread/process is created and the socket is passed to that thread/process. The newly spawned thread/process is now responsible for receiving and sending data while the main thread is still accepting new clients. As mentioned in lecture, thread/process have their own set of issues, largely shared memory. To limit these issues, try to use local variables as much as possible. You should not need to use mutex/locks in this lab! For extra credit, you can also implement a thread pool, process pool, and using Python's [Asynchronous I/O](https://docs.python.org/3/library/asyncio.html){:target="_blank"} library.
+For this lab, you are required to implement a concurrent server in two ways: using threads and using processes. When a new request comes in, a thread/process is created and the socket is passed to that thread/process. The newly spawned thread/process is now responsible for receiving and sending data while the main thread is still accepting new clients. As mentioned in lecture, thread/process have their own set of issues, largely shared memory. To limit these issues, try to use local variables as much as possible. You should not need to use mutex/locks in this lab! For extra credit, you can also implement a thread pool, process pool, and using Python's [Asynchronous I/O](https://docs.python.org/3/library/asyncio.html) library.
 
 As part of writing a well behaving server, you will need to appropriately handle the threads when you are exiting (the user hits `ctrl-c`). This allows your server to finishing handling clients that have already connected before shutting down the server. To do this, you must join all spawned threads.
 
@@ -53,13 +53,13 @@ Only `thread` and `process` are required in this lab. The rest of the concurrenc
 
 ### Benchmarking
 
-As part of this lab, you will be benchmarking the different approaches to concurrency. To do so, you will be using the [wrk2](https://github.com/giltene/wrk2){:target="_blank"} tool. It sends a bunch of HTTP requests to your server and measures how long it takes to respond. You will need to build `wrk2` yourself. I have verified that it works on the embedded lab computers and all you should have to do is run `make` and the `wrk2` executable will be generated. You will benchmark the performance of your lab 5 single thread server vs. threads vs processes. Record the results in `benchmark.md` of your repository. For consistency, record the results of your benchmark using this configuration:
+As part of this lab, you will be benchmarking the different approaches to concurrency. To do so, you will be using the [wrk2](https://github.com/giltene/wrk2) tool. It sends a bunch of HTTP requests to your server and measures how long it takes to respond. You will need to build `wrk2` yourself. I have verified that it works on the embedded lab computers and all you should have to do is run `make` and the `wrk2` executable will be generated. You will benchmark the performance of your lab 5 single thread server vs. threads vs processes. Record the results in `benchmark.md` of your repository. For consistency, record the results of your benchmark using this configuration:
 
 ```
 ./wrk -t10 -c10 -d30s -R10000 http://127.0.0.1:8084/page.html
 ```
 
-Run the benchmark **3 or more times** and report the best run. You should turn off verbose output when running your benchmarks. You are welcome to play around with different configurations, but for the results you report, make sure to use this configuration. Here is an [example]({% link assets/benchmark.md %}){:target="_blank"} of what the benchmark.md file should look like.
+Run the benchmark **3 or more times** and report the best run. You should turn off verbose output when running your benchmarks. You are welcome to play around with different configurations, but for the results you report, make sure to use this configuration. Here is an [example]({% link assets/benchmark.md %}) of what the benchmark.md file should look like.
 
 ## Objectives
 
@@ -74,7 +74,7 @@ Run the benchmark **3 or more times** and report the best run. You should turn o
 
 - You must be able to handle multiple concurrent clients at once using threads and processes.
 
-- You can only use the low-level [threading.Thread](https://docs.python.org/3/library/threading.html#thread-objects){:target="_blank"} and [multiprocessing.Process](https://docs.python.org/3/library/multiprocessing.html#multiprocessing.Process){:target="_blank"} objects. All high-level concurrency libraries like [concurrent.futures](https://docs.python.org/3/library/concurrent.futures.html){:target="_blank"} is not allowed.
+- You can only use the low-level [threading.Thread](https://docs.python.org/3/library/threading.html#thread-objects) and [multiprocessing.Process](https://docs.python.org/3/library/multiprocessing.html#multiprocessing.Process) objects. All high-level concurrency libraries like [concurrent.futures](https://docs.python.org/3/library/concurrent.futures.html) is not allowed.
 
 - Add the `-c`/`--concurrency` flags to your program. You only need to support thread and process.
 
@@ -102,7 +102,7 @@ One way to test that your server is handling multiple clients is to add an artif
 
 For debugging purposes, it might be useful to prefix all log messages with the socket that you are working on. The socket number should correspond to what thread is running. This can give you insight into what each thread is doing.
 
-The benchmarking tool, [wrk2](https://github.com/giltene/wrk2){:target="_blank"}, will also help you in your testing.
+The benchmarking tool, [wrk2](https://github.com/giltene/wrk2), will also help you in your testing.
 
 
 ## Submission
@@ -112,6 +112,6 @@ To submit your code, push it to your Github repository. Tag the commit you want 
 
 ## Resources
 
-- [Python Threads](https://docs.python.org/3/library/threading.html){:target="_blank"}
+- [Python Threads](https://docs.python.org/3/library/threading.html)
 
-- [Python Precesses](https://docs.python.org/3/library/multiprocessing.html){:target="_blank"}
+- [Python Precesses](https://docs.python.org/3/library/multiprocessing.html)

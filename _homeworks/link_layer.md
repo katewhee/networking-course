@@ -4,9 +4,9 @@ title: Link Layer
 chapter: 6
 icon: link-layer.svg
 problems:
-    - question: Did you do the [Ethernet and ARP](http://www-net.cs.umass.edu/wireshark-labs/Wireshark_Ethernet_ARP_v8.0.pdf){:target="_blank"} Wireshark lab?
+    - question: Did you do the [Ethernet and ARP](http://www-net.cs.umass.edu/wireshark-labs/Wireshark_Ethernet_ARP_v8.0.pdf) Wireshark lab?
 
-    - question: Read about ARP spoofing [online](https://en.wikipedia.org/wiki/ARP_spoofing){:target="_blank"}.
+    - question: Read about ARP spoofing [online](https://en.wikipedia.org/wiki/ARP_spoofing).
       parts:
         - Describe how an attacker would perform ARP spoofing to perform a person-in-the-middle attack.
         - Assuming a device has been on a network for awhile, devise a scheme where that device could detect that ARP spoofing is happening on the network and alert the network administrator.

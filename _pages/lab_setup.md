@@ -13,7 +13,7 @@ To SSH into an Embedded Lab computer, use the following host name: `embed-<N>.ee
 
 ## Visual Studio Code
 
-I highly recommend you use [VS Code](https://code.visualstudio.com){:target="_blank"}. It's a good enough [editor]({% link assets/vim.png %}){:target="_blank"} and has a lot of powerful extensions. Specifically, using the auto-formatting on save will save you a lot of trouble (and points) when you submit your code. Set up your VS Code [C/C++ extension](https://marketplace.visualstudio.com/items?itemName=ms-vscode.cpptools){:target="_blank"} with the following Clang format specification:
+I highly recommend you use [VS Code](https://code.visualstudio.com). It's a good enough [editor]({% link assets/vim.png %}) and has a lot of powerful extensions. Specifically, using the auto-formatting on save will save you a lot of trouble (and points) when you submit your code. Set up your VS Code [C/C++ extension](https://marketplace.visualstudio.com/items?itemName=ms-vscode.cpptools) with the following Clang format specification:
 
 ```
 { BasedOnStyle: LLVM, UseTab: Never, IndentWidth: 4, TabWidth: 4, ColumnLimit: 100 }
@@ -29,17 +29,17 @@ I even have it format my code on save.
 
 ![Setting to format on save]({% link assets/format-on-save.png %}){:width="80%"}
 
-If you are working on the labs remotely (SSHing into a computer), I *strongly* recommend you figure out how to use [VS Code's remote development](https://code.visualstudio.com/docs/remote/ssh){:target="_blank"}. It is a very powerful way of developing on a remote machine while making it look like everything is local. Spending some time now will save you a lot of time later... I promise.
+If you are working on the labs remotely (SSHing into a computer), I *strongly* recommend you figure out how to use [VS Code's remote development](https://code.visualstudio.com/docs/remote/ssh). It is a very powerful way of developing on a remote machine while making it look like everything is local. Spending some time now will save you a lot of time later... I promise.
 
 ## Terminal
 
 A theme in this class will be setting up your environment so that it matches your preferences, making your life easier. This is true with your terminal app—set it up so that it brings you joy (as much as a terminal app can) and works with your habits. 
 
-My highly opinionated set up involves using [zsh](https://en.wikipedia.org/wiki/Z_shell){:target="_blank"}, [Oh My Zsh](https://github.com/ohmyzsh/ohmyzsh){:target="_blank"}, and [Powerlevel10k](https://github.com/romkatv/powerlevel10k){:target="_blank"}. If you would like read more about my setup, you can go [here](https://byunetlab.notion.site/Phil-s-Computer-Setup-0722e33e22e74460aa53f58d5f2babb8){:target="_blank"}.
+My highly opinionated set up involves using [zsh](https://en.wikipedia.org/wiki/Z_shell), [Oh My Zsh](https://github.com/ohmyzsh/ohmyzsh), and [Powerlevel10k](https://github.com/romkatv/powerlevel10k). If you would like read more about my setup, you can go [here](https://byunetlab.notion.site/Phil-s-Computer-Setup-0722e33e22e74460aa53f58d5f2babb8).
 
 ## Git Repositories
 
-For the labs, we will be using [GitHub Classroom](https://classroom.github.com/classrooms){:target="_blank"}. If you are unfamiliar with Git, now is the time to start learning. VSCode has some Git integrations which will make this easier. 
+For the labs, we will be using [GitHub Classroom](https://classroom.github.com/classrooms). If you are unfamiliar with Git, now is the time to start learning. VSCode has some Git integrations which will make this easier. 
 
 For each lab, you will be given a link to start the lab. This will automatically create a GitHub repo for you for that lab. The first three labs have template code for you. This is the only way to start and submit the lab! In order for your code to be graded, you must push your code to your repo.
 

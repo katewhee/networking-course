@@ -6,7 +6,7 @@ repo: https://github.com/byu-ecen426-classroom/nibbletorrent-peer.git
 
 > Consistency underlies all principles of quality.
 > 
-> [Frederick P. Brooks, Jr.](https://en.wikipedia.org/wiki/Fred_Brooks){:target="_blank"}
+> [Frederick P. Brooks, Jr.](https://en.wikipedia.org/wiki/Fred_Brooks)
 
 
 ## GitHub Classroom
@@ -16,7 +16,7 @@ Use the GitHub Classroom link posted in the Slack channel for the lab to accept 
 
 ## Overview
 
-You will be implementing a simplified version of a BitTorrent peer, called NibbleTorrent. NibbleTorrent is a peer-to-peer protocol, just like BitTorrent, but without the [Bencoded data](https://en.wikipedia.org/wiki/Bencode){:target="_blank"} and simplified interactions between peers. You will be downloading files using the following procedure:
+You will be implementing a simplified version of a BitTorrent peer, called NibbleTorrent. NibbleTorrent is a peer-to-peer protocol, just like BitTorrent, but without the [Bencoded data](https://en.wikipedia.org/wiki/Bencode) and simplified interactions between peers. You will be downloading files using the following procedure:
 
 1. Get a torrent file and parse it. You can download them here.
    
@@ -64,7 +64,7 @@ The torrent files you will be working with are located [here]({% link assets/tor
 
 #### Tracker
 
-After you have parsed the torrent file, you must make a request to the `tracker_url` to get a list of peers to download the file from. The tracker uses HTTP and parameters are passed using [query strings](https://en.wikipedia.org/wiki/Query_string){:target="_blank"}. You must pass the following parameters:
+After you have parsed the torrent file, you must make a request to the `tracker_url` to get a list of peers to download the file from. The tracker uses HTTP and parameters are passed using [query strings](https://en.wikipedia.org/wiki/Query_string). You must pass the following parameters:
 
 - `peer_id`: This is an ID that uniquely identifies yourself. It needs to following this format: `-ECEN426-<NetID>`. For example, a peer ID would look like `-ECEN426-le0nh4rt`.
 
@@ -259,12 +259,12 @@ To submit your code, push it to your Github repository. Tag the commit you want 
 
 ## Resources
 
-- [A good description of how torrents work and how to write a peer in Go.](https://blog.jse.li/posts/torrent/){:target="_blank"}
+- [A good description of how torrents work and how to write a peer in Go.](https://blog.jse.li/posts/torrent/)
 
-- [SHA-1](https://en.wikipedia.org/wiki/SHA-1){:target="_blank"} (SHA-1 hashes are always 20 bytes long)
+- [SHA-1](https://en.wikipedia.org/wiki/SHA-1) (SHA-1 hashes are always 20 bytes long)
 
-- [Bool array to integer](https://stackoverflow.com/questions/27165607/bool-array-to-integer){:target="_blank"}
+- [Bool array to integer](https://stackoverflow.com/questions/27165607/bool-array-to-integer)
 
-- [Converting int to bytes](https://stackoverflow.com/questions/21017698/converting-int-to-bytes-in-python-3){:target="_blank"}
+- [Converting int to bytes](https://stackoverflow.com/questions/21017698/converting-int-to-bytes-in-python-3)
 
-- [How to get your private IP address](https://pythonguides.com/python-get-an-ip-address/){:target="_blank"}
+- [How to get your private IP address](https://pythonguides.com/python-get-an-ip-address/)

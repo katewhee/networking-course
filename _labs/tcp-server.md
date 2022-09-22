@@ -63,7 +63,7 @@ To simplify this lab, a few adjustments will be made:
 
 The CLI will have no arguments and three options: port, verbose flag, and help flag. The port option changes the port that your server binds to. Your program will generally print nothing to `stdout`. The only exception is if the `--help` option is set. Your program must print to `stderr` any errors while running the server and log messages, if the verbose flag is set.
 
-Your server will be designed to block forever. Once it has handled one client, it will wait for another client to connect. As a result, you must be able to properly handle an [interrupt signal (`SIGINT`)](https://en.wikipedia.org/wiki/Signal_(IPC)){:target="_blank"}. A process is usually sent this signal by typing `ctrl-c` in a terminal window. Your server must catch this signal and properly shutdown the server.
+Your server will be designed to block forever. Once it has handled one client, it will wait for another client to connect. As a result, you must be able to properly handle an [interrupt signal (`SIGINT`)](https://en.wikipedia.org/wiki/Signal_(IPC)). A process is usually sent this signal by typing `ctrl-c` in a terminal window. Your server must catch this signal and properly shutdown the server.
 
 Here is a video of the program running:
 
@@ -75,7 +75,7 @@ Here is a video of the program running:
 
 ### Logging
 
-Like the previous labs, I strongly encourage you to use logging to help debug your program and understand its flow. Python provides a powerful [logging library](https://docs.python.org/3/howto/logging.html){:target="_blank"}. Spend some time learning it and it will pay off later.
+Like the previous labs, I strongly encourage you to use logging to help debug your program and understand its flow. Python provides a powerful [logging library](https://docs.python.org/3/howto/logging.html). Spend some time learning it and it will pay off later.
 
 
 ## Objectives
@@ -89,9 +89,9 @@ Like the previous labs, I strongly encourage you to use logging to help debug yo
 
 - You must use Python 3.8+.
 
-- You **can not use any third party Python libraries** for this lab. If you have to `pip install` or clone any repos, in order to import a library, stop. The only exception is the formatter, [Black](https://github.com/psf/black){:target="_blank"}, which you have to `pip install`. However, you do not use it in your code. 
+- You **can not use any third party Python libraries** for this lab. If you have to `pip install` or clone any repos, in order to import a library, stop. The only exception is the formatter, [Black](https://github.com/psf/black), which you have to `pip install`. However, you do not use it in your code. 
 
-- For all socket related tasks, you must only use the [low-level `socket` interface](https://docs.python.org/3/library/socket.html){:target="_blank"} that Python provides. No high-level server socket interfaces are allowed.
+- For all socket related tasks, you must only use the [low-level `socket` interface](https://docs.python.org/3/library/socket.html) that Python provides. No high-level server socket interfaces are allowed.
 
 - The name of your program must be named `tcp_server.py`.
 
@@ -108,7 +108,7 @@ Options:
 
 - The default port must be `8083`.
 
-- You must set the [`SO_REUSEADDR`](https://man7.org/linux/man-pages/man7/socket.7.html){:target="_blank"} option on the server socket.
+- You must set the [`SO_REUSEADDR`](https://man7.org/linux/man-pages/man7/socket.7.html) option on the server socket.
 
 - Your server must handle any request size.
 
@@ -120,7 +120,7 @@ Options:
 
 - Properly shutdown server when an interrupt signal (`ctrl-c`) is sent to your process. If your server is in the middle of sending/receiving to a client, you can let that finish before stopping the server.
 
-- As per the coding standard, you must use the [Black](https://github.com/psf/black){:target="_blank"} formatter.
+- As per the coding standard, you must use the [Black](https://github.com/psf/black) formatter.
 
 
 ## Testing
@@ -135,12 +135,12 @@ To submit your code, push it to your Github repository. Tag the commit you want 
 
 ## Resources
 
-- [socket — Low-level networking interface](https://docs.python.org/3/library/socket.html){:target="_blank"}. Make sure to look at all of the functions available to you.
+- [socket — Low-level networking interface](https://docs.python.org/3/library/socket.html). Make sure to look at all of the functions available to you.
 
-- [argparse](https://docs.python.org/3/library/argparse.html){:target="_blank"}.
+- [argparse](https://docs.python.org/3/library/argparse.html).
 
-- [Packing and unpacking binary data in Python](https://docs.python.org/3/library/struct.html){:target="_blank"}.
+- [Packing and unpacking binary data in Python](https://docs.python.org/3/library/struct.html).
 
-- [random](https://docs.python.org/3/library/random.html){:target="_blank"}.
+- [random](https://docs.python.org/3/library/random.html).
 
-- [Logging HOWTO](https://docs.python.org/3/howto/logging.html){:target="_blank"} and the [Logging interface](https://docs.python.org/3/library/logging.html){:target="_blank"}.
+- [Logging HOWTO](https://docs.python.org/3/howto/logging.html) and the [Logging interface](https://docs.python.org/3/library/logging.html).
