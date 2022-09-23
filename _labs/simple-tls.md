@@ -16,13 +16,11 @@ Use the GitHub Classroom link posted in the Slack channel for the lab to accept 
 
 ## Overview
 
-In this lab, you will be building a client for a simplified version of TLS, called Simple TLS. While the protocol might seem bloated and redundant, each part of the protocol protects against a specific threat. TLS is a general purpose security protocol that often works with HTTP. Once a TLS connect has been established, the client send normal HTTP requests that get encrypted and secured by the TLS connection. However, to simplify the lab, the server will send you a file after you have connected correctly through SimpleTLS, no need to request a file.
+In this lab, you will be building a client for a simplified version of TLS, called Simple TLS. While the protocol might seem slightly bloated or redundant, each part of the protocol protects against a specific threat. TLS is a general purpose security transfer protocol that often works with HTTP. Once a TLS connect has been established, the client can send normal HTTP requests that get secured by the TLS connection. However, to simplify the lab, the server will send you a file after you have connected correctly through Simple TLS, no need to request a file.
 
 ### Protocol
 
-#### Protocol Flow
-
-SimpleTLS contains a few handshakes to verify the server and establish a secure key between the client and the server. The overall flow of messages is shown below:
+Simple TLS contains a few handshakes to verify the server and establish a shared key between the client and the server. The overall flow of messages is shown below:
 
 <figure class="image mx-auto" style="max-width: 800px">
   <img src="{% link assets/simple_tls_flow.png %}" alt="Protocol flow of Simple TLS.">
@@ -30,11 +28,11 @@ SimpleTLS contains a few handshakes to verify the server and establish a secure 
 </figure>
 
 
-The client connects to the server and sends a hello message. The server responds with its certificate and a [cryptographic nonce](https://en.wikipedia.org/wiki/Cryptographic_nonce). The client verifies the certificate, then sends its own cryptographic nonce that is encrypted using the server's public key (public keys are included inside of certificates). Now that the client has its own nonce and a nonce from the server, it has enough information to generate the master secret. The server will decrypt the encrypted nonce and generate the same master secret. As a final step before data is sent, the server will send a hash of all the messages it has sent to and received from the client. The client will verify the hash of the messages and then send its own hash of messages it has sent and received. Once the server has verified the hash it has received from the client, it will start sending data to the client.
+The client connects to the server and sends a hello message. The server responds with a [cryptographic nonce](https://en.wikipedia.org/wiki/Cryptographic_nonce) and its certificate. The client verifies the certificate, then sends its own cryptographic nonce that is encrypted using the server's public key (public keys are included inside of certificates). Now that the client has its own nonce and a nonce from the server, it has enough information to generate the master secret. The server will decrypt the encrypted nonce and generate the same master secret. As a final step before data is sent, the server will send a hash of all the messages it has sent to and received from the client. The client will verify the hash of the messages and then send its own hash of messages it has sent and received. Once the server has verified the hash it has received from the client, it will start sending data to the client.
 
 #### Header
 
-All messages sent, including the data has a header. This lets the client and server know how to interpret the data. The general structure of the header, along with the sizes of each field is shown below.
+All messages sent, including data messages, has a header. This lets the client and server know how to interpret the data. The general structure of the header, along with the sizes of each field is shown below.
 
 ```
  0                   1                   2                   3
@@ -71,9 +69,9 @@ On the client's end, to verify the certificate, you only need to call `utils.loa
 
 Upon verifying the certificate from the server, the client will generate a 32 byte nonce, encrypt it with the server's public key, and send it to the server in the nonce message (0x03). You can access the public key by calling `certificate.public_key()` on the verified certificate object.
 
-#### Key Derivation
+##### Key Derivation
 
-With both nonces, the client and server have enough information to generate a shared key. It is considered a bad practice to use one shared as the encryption key and data integrity key for both the client and the server. It is better to have two keys, one for encryption and one for data integrity for both client and server (four keys in total). To help with this, you can call `utils.generate_keys` to generate the four keys. It will return a tuple with four items:
+With both nonces, the client and server have enough information to generate a shared key. It is considered a bad practice to use one shared key as the encryption key and data integrity key for both the client and the server. It is better to have two keys, one for encryption and one for data integrity for both client and server (four keys in total). To help with this, you can call `utils.generate_keys` to generate the four keys. It will return a tuple with four items:
 
 1. The server's encryption key
 2. The server's data integrity key
@@ -92,7 +90,7 @@ You can use the `utils.mac` with the appropriate data and key to calculate this 
 
 ##### Data
 
-Assuming that the previous hash matches with the server's hash, the server will start sending data messages (0x05). Using TCP, data is "streamed" between two devices. However, this streaming abstraction starts breaking down when you need to authenticate data. Message authentication codes (MAC) need to be used to verify the data has not been changed, but here do you but the MAC? At the end of the whole stream? Simple TLS (and TLS) deals with this by breaking the stream into chunks. These chunks are encrypted and integrity protected.
+Assuming that the previous hash matches with the server's hash, the server will start sending data messages (0x05). Using TCP, data is "streamed" between two devices. However, this streaming abstraction starts breaking down when you need to integrity protect data. Message authentication codes (MAC) need to be used to verify the data has not been changed, but here do you but the MAC? At the end of the whole stream? Simple TLS (and TLS) deals with this by breaking the stream into chunks. These chunks are encrypted and integrity protected.
 
 <figure class="image mx-auto" style="max-width: 700px">
   <img src="{% link assets/simple_tls_data.png %}" alt="How data is fragmented in Simple TLS.">
@@ -101,7 +99,7 @@ Assuming that the previous hash matches with the server's hash, the server will 
 
 To get the data sent by the server, the client must first decrypt the data using the server's encryption key, calculate the MAC of the data fragment using the server's data integrity key, and compare it to the MAC sent by the server. If the MAC is correct, then the data chunk can be used. The server will continue to send data messages until it has sent a complete file, then it will close the socket.
 
-If you have made it this far and you can view the image you received, you have successfully completed the lab!
+If you have made it this far and you can view the image you received, you have successfully completed the protocol portion of the lab!
 
 ### Command-line Interface (CLI)
 
@@ -125,7 +123,7 @@ optional arguments:
 
 - Get experience with security principles.
 
-- Build a encrypted and authenticated communication protocol.
+- Build a client for a encrypted and integrity protected communication protocol.
   
 
 ## Requirements
