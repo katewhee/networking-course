@@ -6,7 +6,7 @@ repo: https://github.com/byu-ecen426-classroom/nibbletorrent-peer.git
 
 > Consistency underlies all principles of quality.
 > 
-> [Frederick P. Brooks, Jr.](https://en.wikipedia.org/wiki/Fred_Brooks){:target="_blank"}
+> [Frederick P. Brooks, Jr.](https://en.wikipedia.org/wiki/Fred_Brooks)
 
 
 ## GitHub Classroom
@@ -16,7 +16,7 @@ Use the GitHub Classroom link posted in the Slack channel for the lab to accept 
 
 ## Overview
 
-You will be implementing a simplified version of a BitTorrent peer, called NibbleTorrent. NibbleTorrent is a peer-to-peer protocol, just like BitTorrent, but without the [Bencoded data](https://en.wikipedia.org/wiki/Bencode){:target="_blank"} and simplified interactions between peers. You will be downloading files using the following procedure:
+You will be implementing a simplified version of a BitTorrent peer, called NibbleTorrent. NibbleTorrent is a peer-to-peer protocol, just like BitTorrent, but without the [Bencoded data](https://en.wikipedia.org/wiki/Bencode) and simplified interactions between peers. You will be downloading files using the following procedure:
 
 1. Get a torrent file and parse it. You can download them here.
    
@@ -140,7 +140,7 @@ Peers need to communicate with each other to request parts of a file. For this c
 The peer you right must be able to **send and receive** all NibbleTorrent requests.
 
 
-##### Hello Request and Response
+##### Hello Request/Response
 
 After you connected to a peer, you will send them a hello request, with the type field value of `0x01`. This request will ensure that you both are using the same protocol and that the peer actually has the file that you are trying to download. The payload of the request is the torrent ID in binary format. For example, a request might look like this (displayed in hex format):
 
@@ -200,8 +200,8 @@ positional arguments:
   torrent_file          The torrent file for the file you want to download.
 
 optional arguments:
-  -h, --help            Show this help message and exit
-  -p PORT, --port PORT  The port to receive peer connections from
+  -h, --help            Show this help message and exit.
+  -p PORT, --port PORT  The port to receive peer connections from.
   -d DEST, --dest DEST  The folder to download to and seed from.
   -v, --verbose         Turn on debugging messages.
 ```
@@ -228,7 +228,7 @@ Since this is such a complicated program, it might be helpful to give you an ove
 
 - You must use Python 3.8+.
 
-- The only third-party Python library you are allowed to use in this lab is the [requests](https://requests.readthedocs.io/en/latest/). That way you don't have to write your own HTTP client. All other third-party libraries are off limits.
+- The only third-party Python library you are allowed to use in this lab is [requests](https://requests.readthedocs.io/en/latest/). That way you don't have to write your own HTTP client. All other third-party libraries are off limits.
 
 - You must name your program `peer.py`.
 
@@ -259,12 +259,12 @@ To submit your code, push it to your Github repository. Tag the commit you want 
 
 ## Resources
 
-- [A good description of how torrents work and how to write a peer in Go.](https://blog.jse.li/posts/torrent/){:target="_blank"}
+- [A good description of how torrents work and how to write a peer in Go.](https://blog.jse.li/posts/torrent/)
 
-- [SHA-1](https://en.wikipedia.org/wiki/SHA-1){:target="_blank"} (SHA-1 hashes are always 20 bytes long)
+- [SHA-1](https://en.wikipedia.org/wiki/SHA-1) (SHA-1 hashes are always 20 bytes long)
 
-- [Bool array to integer](https://stackoverflow.com/questions/27165607/bool-array-to-integer){:target="_blank"}
+- [Bool array to integer](https://stackoverflow.com/questions/27165607/bool-array-to-integer)
 
-- [Converting int to bytes](https://stackoverflow.com/questions/21017698/converting-int-to-bytes-in-python-3){:target="_blank"}
+- [Converting int to bytes](https://stackoverflow.com/questions/21017698/converting-int-to-bytes-in-python-3)
 
-- [How to get your private IP address](https://pythonguides.com/python-get-an-ip-address/){:target="_blank"}
+- [How to get your private IP address](https://pythonguides.com/python-get-an-ip-address/)

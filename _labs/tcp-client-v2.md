@@ -6,7 +6,7 @@ repo: https://github.com/byu-ecen426-classroom/tcp_client_v2.git
 
 > Any fool can write code that a computer can understand. Good programmers write code that humans can understand.
 > 
-> [Martin Fowler](https://en.wikipedia.org/wiki/Martin_Fowler_(software_engineer)){:target="_blank"}
+> [Martin Fowler](https://en.wikipedia.org/wiki/Martin_Fowler_(software_engineer))
 
 ## GitHub Classroom
 
@@ -16,7 +16,7 @@ Use the GitHub Classroom link posted in the Slack channel for the lab to accept 
 ## Overview
 For this lab, you will be building off what you did in the previous lab. You will want to use your previous code as a starting point. We will be using the same protocol, but with a minor adjustment. The `Config` `struct` and `tcp_client.h` file have been modified to reflect these changes, so make sure to review these changes.
 
-This lab adds [pipelining](https://en.wikipedia.org/wiki/Pipeline_(computing)){:target="_blank"} to our protocol. In this context, pipelining is sending multiple requests in one TCP connection. In the previous lab, if you wanted to send multiple requests, you had to start a TCP connect for each request. This can be quite time consuming because of [TCP's three-way handshake](https://en.wikipedia.org/wiki/Transmission_Control_Protocol#Connection_establishment){:target="_blank"}. Rather than starting a new TCP connection for each request, we can reuse the TCP socket and send multiple requests. To accommodate pipelining, both your command-line tool and our protocol will need to change. 
+This lab adds [pipelining](https://en.wikipedia.org/wiki/Pipeline_(computing)) to our protocol. In this context, pipelining is sending multiple requests in one TCP connection. In the previous lab, if you wanted to send multiple requests, you had to start a TCP connect for each request. This can be quite time consuming because of [TCP's three-way handshake](https://en.wikipedia.org/wiki/Transmission_Control_Protocol#Connection_establishment). Rather than starting a new TCP connection for each request, we can reuse the TCP socket and send multiple requests. To accommodate pipelining, both your command-line tool and our protocol will need to change. 
 
 ### Protocol
 
@@ -137,22 +137,22 @@ To submit your code, push it to your Github repository. Tag the commit you want 
 
 ## Resources
 
-- [strchr](http://www.cplusplus.com/reference/cstring/strchr/){:target="_blank"}
+- [strchr](http://www.cplusplus.com/reference/cstring/strchr/)
 
 - Memory management
-    - [malloc](https://en.cppreference.com/w/c/memory/malloc){:target="_blank"}
+    - [malloc](https://en.cppreference.com/w/c/memory/malloc)
 
-    - [realloc](https://en.cppreference.com/w/c/memory/realloc){:target="_blank"}
+    - [realloc](https://en.cppreference.com/w/c/memory/realloc)
 
-    - [Please Grow Your Buffers Exponentially](https://blog.mozilla.org/nnethercote/2014/11/04/please-grow-your-buffers-exponentially/){:target="_blank"}
+    - [Please Grow Your Buffers Exponentially](https://blog.mozilla.org/nnethercote/2014/11/04/please-grow-your-buffers-exponentially/)
 
-    - [This might be helpful too.](https://stackoverflow.com/questions/15409453/pointer-being-reallocd-was-not-allocated){:target="_blank"}
+    - [This might be helpful too.](https://stackoverflow.com/questions/15409453/pointer-being-reallocd-was-not-allocated)
 
-- [Function pointers](https://www.learn-c.org/en/Function_Pointers){:target="_blank"}
+- [Function pointers](https://www.learn-c.org/en/Function_Pointers)
 
 - File IO
-    - [fopen](http://www.cplusplus.com/reference/cstdio/fopen/){:target="_blank"}
+    - [fopen](http://www.cplusplus.com/reference/cstdio/fopen/)
 
-    - [fread](http://www.cplusplus.com/reference/cstdio/fread/){:target="_blank"}
+    - [fread](http://www.cplusplus.com/reference/cstdio/fread/)
 
-    - [getline](https://linux.die.net/man/3/getline){:target="_blank"}
+    - [getline](https://linux.die.net/man/3/getline)

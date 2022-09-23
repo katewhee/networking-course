@@ -15,7 +15,7 @@ icon: fas fa-terminal
 
 * **1.4** Avoid using repetitive sections of copied and pasted code in your programs.
 
-* **1.5** No external downloaded libraries are allowed, except for the simple logging library, [log.c](https://github.com/rxi/log.c){:target="_blank"}, unless the lab description specifies otherwise. Libraries that come standard in the Unix environment are allowed (e.g., `string.h`, `getopt.h`, `stdio.h`). 
+* **1.5** No external downloaded libraries are allowed, except for the simple logging library, [log.c](https://github.com/rxi/log.c), unless the lab description specifies otherwise. Libraries that come standard in the Unix environment are allowed (e.g., `string.h`, `getopt.h`, `stdio.h`). 
 
 * **1.6** All code will be graded against the coding standard.
 
@@ -28,13 +28,13 @@ icon: fas fa-terminal
     - A description of the return value and its meaning.
 
 ### 3. Formatting
-* **3.1** If you are writing C code, you must use the [`clang-format`](https://clang.llvm.org/docs/ClangFormat.html){:target="_blank"} code formatter on your code. I recommend you use something that automatically formats your code when you save your file, such as [VS Code](https://code.visualstudio.com){:target="_blank"} and the [C/C++ Extension](https://github.com/Microsoft/vscode-cpptools){:target="_blank"}. You must configure your system with the following settings:
+* **3.1** If you are writing C code, you must use the [`clang-format`](https://clang.llvm.org/docs/ClangFormat.html) code formatter on your code. I recommend you use something that automatically formats your code when you save your file, such as [VS Code](https://code.visualstudio.com) and the [C/C++ Extension](https://github.com/Microsoft/vscode-cpptools). You must configure your system with the following settings:
     - BasedOnStyle: LLVM
     - IndentWidth: 4
     - UseTab: Never
     - ColumnLimit: 80 or 100
 
-* **3.2** If you are writing Python code, you must use the [`black`](https://github.com/psf/black){:target="_blank"} code formatter. I recommend you use something that automatically formats your code when [you save your file](https://dev.to/adamlombard/how-to-use-the-black-python-code-formatter-in-vscode-3lo0){:target="_blank"}.
+* **3.2** If you are writing Python code, you must use the [`black`](https://github.com/psf/black) code formatter. I recommend you use something that automatically formats your code when [you save your file](https://dev.to/adamlombard/how-to-use-the-black-python-code-formatter-in-vscode-3lo0).
 
 ### 4. Program Output
 * **4.1** All logging messages must be written to `stderr`.

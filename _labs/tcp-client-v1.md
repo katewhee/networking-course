@@ -7,7 +7,7 @@ repo: https://github.com/byu-ecen426-classroom/tcp_client_v1.git
 
 > Programming isn't about what you know; it's about what you can figure out.
 > 
-> [Chris Pine]({% link assets/chris-pine.png %}){:target="_blank"}
+> [Chris Pine]({% link assets/chris-pine.png %})
 
 ## GitHub Classroom
 
@@ -57,7 +57,7 @@ To make this lab easier, you can assume the following:
 
 - Your application does not need to handle more than 1024 bytes of input.
 
-For all labs, you have the option of using a simple logging library, [log.c](https://github.com/rxi/log.c){:target="_blank"}. I highly recommend you get familiar with it and use it. It does a lot of things for you and will save you time. If you do use it (and really you should), take care to provide the right log level output for messages (e.g., `log_debug`, `log_info`, `log_warn`). This will save you trouble when later when you are hunting down a bug. In my opinion, good logging messages is the key to good debugging.
+For all labs, you have the option of using a simple logging library, [log.c](https://github.com/rxi/log.c). I highly recommend you get familiar with it and use it. It does a lot of things for you and will save you time. If you do use it (and really you should), take care to provide the right log level output for messages (e.g., `log_debug`, `log_info`, `log_warn`). This will save you trouble when later when you are hunting down a bug. In my opinion, good logging messages is the key to good debugging.
 
 ## Objectives
 
@@ -96,7 +96,7 @@ Options:
 
 - When the verbose flag is set, you must print debugging messages to `stderr`. These debugging messages must be *meaningful* and not garbage data. They should be helpful to anyone that is trying to debug your program.
 
-- Your program must return a correct exit code, using `EXIT_SUCCESS` and `EXIT_FAILURE` (see [here](https://en.wikipedia.org/wiki/Exit_status#C_language){:target="_blank"}).
+- Your program must return a correct exit code, using `EXIT_SUCCESS` and `EXIT_FAILURE` (see [here](https://en.wikipedia.org/wiki/Exit_status#C_language)).
 
 - Your program should be robust against bad input from the user.
 
@@ -113,7 +113,7 @@ nc -l 8080
 
 You can have your client connect to the server and see what is being received. You can also type a message into `netcat` as a response to your client.
 
-I will also be running a TCP server at `ecenetworking-server.et.byu.edu:8080`. This server is only accessible on campus (for security purposes). If you are off-campus, you will need to VPN or use [SSH port forwarding](https://help.ubuntu.com/community/SSH/OpenSSH/PortForwarding){:target="_blank"} to test against it. Using the College's VPN is the easier approach, however, here is a video demonstrating how to using port forwarding to test out lab 1:
+I will also be running a TCP server at `ecenetworking-server.et.byu.edu:8080`. This server is only accessible on campus (for security purposes). If you are off-campus, you will need to VPN or use [SSH port forwarding](https://help.ubuntu.com/community/SSH/OpenSSH/PortForwarding) to test against it. Using the College's VPN is the easier approach, however, here is a video demonstrating how to using port forwarding to test out lab 1:
 
 <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/Kfmsi_WCd74" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
@@ -129,24 +129,24 @@ To submit your code, push it to your Github repository. Tag the commit you want 
 
 ## Resources
 
-- [getopt](https://man7.org/linux/man-pages/man3/getopt.3.html){:target="_blank"}
+- [getopt](https://man7.org/linux/man-pages/man3/getopt.3.html)
 
-- [Options vs Arguments](https://stackoverflow.com/questions/36495669/difference-between-terms-option-argument-and-parameter){:target="_blank"}
+- [Options vs Arguments](https://stackoverflow.com/questions/36495669/difference-between-terms-option-argument-and-parameter)
 
-- [Guide on socket programming](https://beej.us/guide/bgnet/html/){:target="_blank"}
+- [Guide on socket programming](https://beej.us/guide/bgnet/html/)
 
 - `stderr` and `stdout`
-    - [Tutorial](http://www.learnlinux.org.za/courses/build/shell-scripting/ch01s04.html){:target="_blank"}
-    - [`stderr` vs `stdout`](https://stackoverflow.com/questions/3385201/confused-about-stdin-stdout-and-stderr){:target="_blank"}
-    - [Redirect `stderror`](https://askubuntu.com/questions/625224/how-to-redirect-stderr-to-a-file){:target="_blank"}
+    - [Tutorial](http://www.learnlinux.org.za/courses/build/shell-scripting/ch01s04.html)
+    - [`stderr` vs `stdout`](https://stackoverflow.com/questions/3385201/confused-about-stdin-stdout-and-stderr)
+    - [Redirect `stderror`](https://askubuntu.com/questions/625224/how-to-redirect-stderr-to-a-file)
 
-- [Printing to `stderr` or `stdout`](https://stackoverflow.com/questions/39002052/how-i-can-print-to-stderr-in-c#39002243){:target="_blank"}
+- [Printing to `stderr` or `stdout`](https://stackoverflow.com/questions/39002052/how-i-can-print-to-stderr-in-c#39002243)
 
-- [Wrapping `printf` into a function](https://stackoverflow.com/questions/20639632/how-to-wrap-printf-into-a-function-or-macro){:target="_blank"}
+- [Wrapping `printf` into a function](https://stackoverflow.com/questions/20639632/how-to-wrap-printf-into-a-function-or-macro)
 
-- [`netcat`](https://en.wikipedia.org/wiki/Netcat){:target="_blank"}
+- [`netcat`](https://en.wikipedia.org/wiki/Netcat)
 
-- [Exit Status](https://www.tldp.org/LDP/abs/html/exit-status.html){:target="_blank"}
+- [Exit Status](https://www.tldp.org/LDP/abs/html/exit-status.html)
 
 - Be careful of unicode characters sneaking into your input. Characters are counted differently than bytes with unicode, so `strlen` will not work! These labs only needs to work with ASCII text.
-  - [A solution for counting characters and not bytes in C](https://stackoverflow.com/a/3911566){:target="_blank"}
+  - [A solution for counting characters and not bytes in C](https://stackoverflow.com/a/3911566)

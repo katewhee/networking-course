@@ -6,7 +6,7 @@ repo: https://github.com/byu-ecen426-classroom/tcp_client_v3.git
 
 > If debugging is the process of removing software bugs, then programming must be the process of putting them in. 
 > 
-> [Edsger Dijkstra](https://en.wikipedia.org/wiki/Edsger_W._Dijkstra){:target="_blank"}
+> [Edsger Dijkstra](https://en.wikipedia.org/wiki/Edsger_W._Dijkstra)
 
 ## GitHub Classroom
 
@@ -15,7 +15,7 @@ Use the GitHub Classroom link posted in the Slack channel for the lab to accept 
 
 ## Overview
 
-For this lab, you will be building off what you did in the previous two labs. You will want to use your previous code as a starting point. The major difference is that we will be creating a [binary protocol](https://en.wikipedia.org/wiki/Binary_protocol){:target="_blank"}. What this means is that instead of using ASCII, we will be using binary. I know what you are thinking: ASCII is binary! And you are right! In fact, this protocol will still have ASCII characters to represent the text of the message. However, for the action and message length fields, we will be using binary.
+For this lab, you will be building off what you did in the previous two labs. You will want to use your previous code as a starting point. The major difference is that we will be creating a [binary protocol](https://en.wikipedia.org/wiki/Binary_protocol). What this means is that instead of using ASCII, we will be using binary. I know what you are thinking: ASCII is binary! And you are right! In fact, this protocol will still have ASCII characters to represent the text of the message. However, for the action and message length fields, we will be using binary.
 
 ### Protocol
 
@@ -64,7 +64,7 @@ Message Length: 32 bits
 Data: variable
 ```
 
-When dealing with binary formats, you have to be careful what kind of [endianness](https://en.wikipedia.org/wiki/Endianness){:target="_blank"} you use. You don't know what architecture the server is running, so you can't assume it is the same as yours. The server also can't assume anything. To deal with this, all networking protocols are formatted in big-endianness (called network order).
+When dealing with binary formats, you have to be careful what kind of [endianness](https://en.wikipedia.org/wiki/Endianness) you use. You don't know what architecture the server is running, so you can't assume it is the same as yours. The server also can't assume anything. To deal with this, all networking protocols are formatted in big-endianness (called network order).
 
 For example, if you wanted to reverse the string "The LAN Before Time", then you would send the following binary data (displayed in hex format):
 
@@ -97,7 +97,7 @@ Your program will take the same input file as the previous lab. So from the comm
 
 ### Technical Debt
 
-At this point in the labs, you might have incurred some [technical debt](https://en.wikipedia.org/wiki/Technical_debt){:target="_blank"}. Since this lab is on the lighter side, this is your chance to pay it back. Take some time to understand how all of the different parts come together. Having a clear understanding of this will be helpful in future labs. Take time to make sure your code is clean and understandable. Run [Valgrind](https://www.valgrind.org){:target="_blank"}... it's a requirement.
+At this point in the labs, you might have incurred some [technical debt](https://en.wikipedia.org/wiki/Technical_debt). Since this lab is on the lighter side, this is your chance to pay it back. Take some time to understand how all of the different parts come together. Having a clear understanding of this will be helpful in future labs. Take time to make sure your code is clean and understandable. Run [Valgrind](https://www.valgrind.org)... it's a requirement.
 
 
 ## Objectives
@@ -133,7 +133,7 @@ valgrind --tool=memcheck --leak-check=yes --show-reachable=yes --num-callers=20 
 
 ## Testing
 
-You can follow the same testing structure as lab 1 and 2. I will also be running a TCP server at `ecenetworking-server.et.byu.edu:8082`. This server is only accessible on campus (for security purposes). If you are off-campus, you will need to VPN or use [SSH port forwarding](https://help.ubuntu.com/community/SSH/OpenSSH/PortForwarding){:target="_blank"} to test against it.
+You can follow the same testing structure as lab 1 and 2. I will also be running a TCP server at `ecenetworking-server.et.byu.edu:8082`. This server is only accessible on campus (for security purposes). If you are off-campus, you will need to VPN or use [SSH port forwarding](https://help.ubuntu.com/community/SSH/OpenSSH/PortForwarding) to test against it.
 
 
 ## Submission
@@ -143,11 +143,11 @@ To submit your code, push it to your Github repository. Tag the commit you want 
 
 ## Resources
 
-- [`htonl`, `htons`, `ntohl`, `ntohs`](https://linux.die.net/man/3/htonl){:target="_blank"}
+- [`htonl`, `htons`, `ntohl`, `ntohs`](https://linux.die.net/man/3/htonl)
 
-- [The Valgrind Quick Start Guide](https://www.valgrind.org/docs/manual/quick-start.html#quick-start.mcrun){:target="_blank"}
+- [The Valgrind Quick Start Guide](https://www.valgrind.org/docs/manual/quick-start.html#quick-start.mcrun)
 
-- [Copying integer value to character buffer and vice versa in C](https://www.includehelp.com/c/copying-of-integer-value-to-character-buffer-and-vice-versa-in-c.aspx){:target="_blank"}
+- [Copying integer value to character buffer and vice versa in C](https://www.includehelp.com/c/copying-of-integer-value-to-character-buffer-and-vice-versa-in-c.aspx)
 
 - [C bit fields](https://www.tutorialspoint.com/cprogramming/c_bit_fields.htm)
   - [Reference](https://en.cppreference.com/w/cpp/language/bit_field)
