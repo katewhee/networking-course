@@ -39,7 +39,7 @@ We will be going back to our old-faithful protocol. It will work the following w
 The only arguments for this lab are NetID, action, message. The NetID will be used for the topic that you publish and subscribe to. The action and message will be the same as the previous labs. Similar to earlier labs, your client must take a hostname and port number. The default port number should be 1883, and the default host should be `localhost`. The provided NetID will also be used for the client ID. You must use look something like this usage pattern:
 
 ```
-Usage: mqtt_client.py [--help] [-v] [-h HOST] [-p PORT] NETID ACTION MESSAGE
+Usage: mqtt_client.py [--help] [-v] [--host HOST] [-p PORT] NETID ACTION MESSAGE
 
 Arguments:
  NETID The NetID of the user.
@@ -50,7 +50,7 @@ Arguments:
 Options:
  --help
  -v, --verbose
- --host HOSTNAME, -h HOSTNAME
+ --host HOSTNAME
  --port PORT, -p PORT
 ```
 
@@ -101,7 +101,7 @@ To submit your code, push it to your Github repository. Tag the commit you want 
 
 ## Resources
 
-- [argparse](https://docs.python.org/3/library/argparse.html) or [click](https://click.palletsprojects.com/en/8.0.x/)
+- [argparse](https://docs.python.org/3/library/argparse.html)
 - [Paho MQTT Python client](https://www.eclipse.org/paho/index.php?page=clients/python/docs/index.php)
 - [Paho MQTT Python client publication example](https://github.com/eclipse/paho.mqtt.python/blob/master/examples/client_pub-wait.py)
 - [Paho MQTT Python client subscription example](https://github.com/eclipse/paho.mqtt.python/blob/master/examples/client_sub.py)
