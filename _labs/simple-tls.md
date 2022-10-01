@@ -132,7 +132,7 @@ optional arguments:
 
 - The only third-party Python library you are allowed to use in this lab is [cryptography](https://cryptography.io/en/latest/), and the two modules I am providing, `crypto_utils.py`, and `message.py`. You shouldn't have to use the cryptography library directly if you plan on using `crypto_utils.py` All other third-party libraries are off limits.
 
-- You must name your program `client.py`.
+- You must name your program `simple_tls_client.py`.
 
 - Your program must have the usage pattern provided above and parse all of the options and arguments correctly.
 
