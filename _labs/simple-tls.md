@@ -145,7 +145,7 @@ optional arguments:
 
 ## Testing
 
-I will also be running a Simple TLS server at `ecenetworking-server.et.byu.edu:8087`.
+I will also be running a Simple TLS server at `lundrigan.byu.edu:8087`.
 
 
 ## Submission

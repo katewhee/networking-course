@@ -113,12 +113,12 @@ nc -l 8080
 
 You can have your client connect to the server and see what is being received. You can also type a message into `netcat` as a response to your client.
 
-I will also be running a TCP server at `ecenetworking-server.et.byu.edu:8080`. This server is only accessible on campus (for security purposes). If you are off-campus, you will need to VPN or use [SSH port forwarding](https://help.ubuntu.com/community/SSH/OpenSSH/PortForwarding) to test against it. Using the College's VPN is the easier approach, however, here is a video demonstrating how to using port forwarding to test out lab 1:
+I will also be running a TCP server at `lundrigan.byu.edu:8080`. This server is only accessible on campus (for security purposes). If you are off-campus, you will need to VPN or use [SSH port forwarding](https://help.ubuntu.com/community/SSH/OpenSSH/PortForwarding) to test against it. Using the College's VPN is the easier approach, however, here is a video demonstrating how to using port forwarding to test out lab 1:
 
 <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/Kfmsi_WCd74" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 <div class="alert alert-warning" style="width: 560px" role="alert">
-  The hostname of the lab server has changed. Instead of <code>lundrigan.byu.edu</code> it is <code>ecenetworking-server.et.byu.edu</code>.
+  The hostname of the lab server has changed. Instead of <code>lundrigan.byu.edu</code> it is <code>lundrigan.byu.edu</code>.
 </div>
 
 
