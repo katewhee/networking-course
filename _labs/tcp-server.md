@@ -98,7 +98,7 @@ Like the previous labs, I strongly encourage you to use logging to help debug yo
 - `tcp_server.py` accepts no arguments, and three options, as outlined above.
 
 ```
-Usage: tcp_server [--help] [-v] [-p PORT]
+Usage: tcp_server.py [--help] [-v] [-p PORT]
 
 Options:
   --help
