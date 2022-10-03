@@ -97,19 +97,25 @@ Assuming that the previous hash matches with the server's hash, the server will 
   <figcaption style="text-align: center;">How data is fragmented in Simple TLS. Figure adapted from <a href="https://www.amazon.com/dp/0201615983">"SSL and TLS: Designing and Building Secure Systems"</a> book.</figcaption>
 </figure>
 
-To get the data sent by the server, the client must first decrypt the data using the server's encryption key, calculate the MAC of the data fragment using the server's data integrity key, and compare it to the MAC sent by the server. If the MAC is correct, then the data chunk can be used. The server will continue to send data messages until it has sent a complete file, then it will close the socket.
+To get the data sent by the server, the client must first decrypt the data using the server's encryption key. The decrypted data has the following format:
+
+- Sequence number — 4 bytes
+- Data chunk — variable bytes
+- MAC — 32 bytes
+
+After you pull apart the decrypted payload, verify the sequence number, calculate the MAC on the data chunk using the server's data integrity key, and finally compare the MAC with the MAC sent from the server. If the sequence number and MAC are correct, then the data chunk can be used. The server will continue to send data messages until it has sent a complete file, then it will close the socket. Warning: an advisory will occasionally change the encrypted data or replay data, so you must check the sequence number and verify the MAC.
 
 If you have made it this far and you can view the image you received, you have successfully completed the protocol portion of the lab!
 
 ### Command-line Interface (CLI)
 
-Your program must take one optional argument and four options. The only argument is the output file name. When your client connects to the server properly, the server will send you a file. You will save the data to the specified file name. If no file is provided, then write to `stdout`. You should be familiar with the four options and how they work.
+Your program must take one optional argument and four options. The only argument is the output file name. When your client connects to the server properly, the server will send you a file. You will save the data to the specified file name. If a user would like to write to `stdout`, a dash (`-`) can be used. You should be familiar with the four options and how they work.
 
 ```
-usage: client.py [-h] [-p PORT] [--host HOST] [-v] [file]
+usage: client.py [-h] [-p PORT] [--host HOST] [-v] file
 
 positional arguments:
-  file                  The file name to save to. It must be a PNG file extension. The default is
+  file                  The file name to save to. It must be a PNG file extension. Use - for
                         stdout.
 
 optional arguments:
