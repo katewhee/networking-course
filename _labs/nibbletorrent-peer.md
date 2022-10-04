@@ -49,7 +49,7 @@ Here is an example of a NibbleTorrent file:
 ```json
 {
     "torrent_id": "84e199cad6b953eee0c9b6d8b72612ddb2488999",
-    "tracker_url": "http://lundrigan.byu.edu:6969/announce",
+    "tracker_url": "http://lundrigan.byu.edu:8088/announce",
     "file_size": 8192,
     "file_name": "file.txt",
     "piece_size": 4096,
@@ -77,7 +77,7 @@ After you have parsed the torrent file, you must make a request to the `tracker_
 Using the example from above, your request would look like:
 
 ```
-GET http://lundrigan.byu.edu:6969/announce?peer_id=ECEN426-le0nh4rt&ip=10.35.120.175&port=6981&torrent_id=84e199cad6b953eee0c9b6d8b72612ddb2488999 HTTP/1.1
+GET http://lundrigan.byu.edu:8088/announce?peer_id=ECEN426-le0nh4rt&ip=10.35.120.175&port=6981&torrent_id=84e199cad6b953eee0c9b6d8b72612ddb2488999 HTTP/1.1
 ```
 When you make this request with a valid peer ID, IP address, port, and torrent ID, the tracker will return a JSON payload with the following keys:
 
