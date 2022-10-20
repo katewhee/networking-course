@@ -53,7 +53,7 @@ Only `thread` and `process` are required in this lab. The rest of the concurrenc
 
 ### Benchmarking
 
-As part of this lab, you will be benchmarking the different approaches to concurrency. To do so, you will be using the [wrk2](https://github.com/giltene/wrk2) tool. It sends a bunch of HTTP requests to your server and measures how long it takes to respond. You will need to build `wrk2` yourself. I have verified that it works on the embedded lab computers and all you should have to do is run `make` and the `wrk2` executable will be generated. You will benchmark the performance of your lab 5 single thread server vs. threads vs processes. Record the results in `benchmark.md` of your repository. For consistency, record the results of your benchmark using this configuration:
+As part of this lab, you will be benchmarking the different approaches to concurrency. To do so, you will be using the [wrk2](https://github.com/giltene/wrk2) tool. It sends a bunch of HTTP requests to your server and measures how long it takes to respond. You will need to build `wrk2` yourself by cloning the [linked repo](https://github.com/giltene/wrk2) and running `make`. After running `make`, a `wrk2` executable will be generated. I have verified that it works on the embedded lab computers. You will benchmark the performance of your lab 5 single thread server vs. threads vs processes. Record the results in `benchmark.md` of your repository. For consistency, record the results of your benchmark using this configuration:
 
 ```
 ./wrk -t10 -c10 -d30s -R10000 http://127.0.0.1:8084/page.html
