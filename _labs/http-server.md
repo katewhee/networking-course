@@ -95,7 +95,7 @@ Options:
 
 - Your server needs to be able to return a requested file of any size. Take special care on how you read the file from disk. You probably can't fit a 1 TB file into memory, so how can you serve a file that big?
 
-- Your application must print the response to `stdout`. All other class norms must be followed (e.g., print errors to `stderr`, correct return codes, etc.).
+- All other class norms must be followed (e.g., print errors to `stderr`, correct return codes, etc.).
 
 
 
