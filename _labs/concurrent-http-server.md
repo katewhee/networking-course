@@ -76,7 +76,7 @@ Run the benchmark **3 or more times** and report the best run. You should turn o
 
 - You can only use the low-level [threading.Thread](https://docs.python.org/3/library/threading.html#thread-objects) and [multiprocessing.Process](https://docs.python.org/3/library/multiprocessing.html#multiprocessing.Process) objects. All high-level concurrency libraries like [concurrent.futures](https://docs.python.org/3/library/concurrent.futures.html) is not allowed.
 
-- Add the `-c`/`--concurrency` flags to your program. You only need to support thread and process.
+- Add the `-c`/`--concurrency` flags to your program. You only need to support `thread` and `process`. If the concurrency flag is not provided, the default value should be `thread`. 
 
 - You must gracefully shutdown your server, waiting for all client sockets to finish.
 
