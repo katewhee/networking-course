@@ -15,7 +15,7 @@ problems:
     - question: Consider sending a 2400-byte datagram into a link that has an MTU (maximum transmit unit) of 700 bytes. Suppose the original datagram is stamped with the identification number 422. You might have to look up the [specifics of each field](https://en.wikipedia.org/wiki/IPv4#Header) to answer this question. Remember, the IP header takes up 20 bytes of the MTU.
       parts:
         - How many fragments are generated? 
-        - List the (1) identification field, (2) fragment offset field, (3) more fragments flag, and (4) size field for each of the fragments generated.
+        - List the (1) identification field, (2) fragment offset field, (3) more fragments flag, and (4) length field for each of the fragments generated.
 
     - question: Assume you are setting up subnets on your home network, using the address space 192.168.0.0/16. You are trying to make subnets as small as possible but still accommodate the necessary number of hosts. What should the subnet (in CIDER notation) be if you want to support at most 61 hosts?
 
