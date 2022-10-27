@@ -114,4 +114,7 @@ To submit your code, push it to your Github repository. Tag the commit you want 
 
 - [Python Threads](https://docs.python.org/3/library/threading.html)
 
-- [Python Precesses](https://docs.python.org/3/library/multiprocessing.html)
+- [Python Processes](https://docs.python.org/3/library/multiprocessing.html)
+
+- Ignore ctrl-c on a process: `signal.signal(signal.SIGINT, SIG_IGN)`
+  
