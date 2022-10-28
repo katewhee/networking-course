@@ -32,7 +32,7 @@ We will not be using a username and password for this lab.
 
 We will be going back to our old-faithful protocol. It will work the following way: A client will publish a message with a topic set to `<netid>/<action>/request`. The payload of the message will be the text you want to transform. For example, if you want to uppercase the text, "Networking is the best!" and your NetID is [le0nh4rt](https://en.wikipedia.org/wiki/Squall_Leonhart), then you would publish to the topic `le0nh4rt/uppercase/request` and the message would be "Networking is the best!". Your client must subscribe to the topic `<netid>/<action>/response`. Using the previous example, you would subscribe to `le0nh4rt/uppercase/response` to get the response, which would be "NETWORKING IS THE BEST!".
 
-**Note**: We are trying to fit a request/response protocol into a publisher/subscriber model. Though it happens all the time, it is not ideal and slightly unintuitive. We are doing this to combine something you are familiar with something new. In the last lab, you will see the full power and beauty of a publisher/subscriber protocol.
+**Note**: We are trying to fit a request/response protocol into a publisher/subscriber model. Though it happens all the time, it is not ideal and slightly unintuitive. We are doing this to combine something you are familiar with something new.
 
 ### Command-line Interface (CLI)
 
