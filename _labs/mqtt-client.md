@@ -39,19 +39,18 @@ We will be going back to our old-faithful protocol. It will work the following w
 The only arguments for this lab are NetID, action, message. The NetID will be used for the topic that you publish and subscribe to. The action and message will be the same as the previous labs. Similar to earlier labs, your client must take a hostname and port number. The default port number should be 1883, and the default host should be `localhost`. The provided NetID will also be used for the client ID. You must use look something like this usage pattern:
 
 ```
-Usage: mqtt_client.py [--help] [-v] [--host HOST] [-p PORT] NETID ACTION MESSAGE
+usage: mqtt_client.py [-h] [-p PORT] [--host HOST] [-v] netid action message
 
-Arguments:
- NETID The NetID of the user.
- ACTION Must be uppercase, lowercase, title-case,
- reverse, or shuffle.
- MESSAGE Message to send to the server
+positional arguments:
+  netid
+  action
+  message
 
-Options:
- --help
- -v, --verbose
- --host HOSTNAME
- --port PORT, -p PORT
+optional arguments:
+  -h, --help            show this help message and exit
+  -p PORT, --port PORT
+  --host HOST
+  -v, --verbose
 ```
 
 **Note**: The usage pattern can differ slightly depending on the language and library you use to implement the argument parsing, but the general meaning of the usuage pattern should be the same.
