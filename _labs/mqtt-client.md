@@ -85,6 +85,8 @@ Here is a demonstration of the client:
 
 - Your client must subscribe and publish using QoS of 1.
 
+- Answer [these questions]({% link assets/questions.txt %}) on MQTT. The questions should be answered in a file called `questions.txt` and placed in your repository.
+
 
 ## Testing
 

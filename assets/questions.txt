@@ -1,0 +1,15 @@
+1. What are the different QoS levels that MQTT provides? Provide an explanation of when you would use each of the QoS levels.
+
+[put answer here]
+
+2. MQTT uses TCP under the hood. Why then would MQTT include QoS when TCP provides reliability?
+
+[put answer here]
+
+3. What are some benefits of using MQTT (provide 2 examples)? What are some disadvantages of using MQTT (provide 2 examples)?
+
+[put answer here]
+
+4. What are some commercial products that use MQTT (provide 2). Why do you think the company decided to use MQTT for that product?
+
+[put answer here]
