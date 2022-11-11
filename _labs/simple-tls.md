@@ -148,6 +148,8 @@ optional arguments:
 
 - You must be able to download and display the image the server sends to you.
 
+- Answer [these questions]({% link assets/simple_tls_questions.txt %}) on security. The questions should be answered in a file called `questions.txt` and placed in your repository.
+
 
 ## Testing
 

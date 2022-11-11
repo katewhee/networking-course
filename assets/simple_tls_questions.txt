@@ -1,0 +1,15 @@
+1. What is the purpose of a cryptographic nonce? What are some characteristics of a good nonce?
+
+[put answer here]
+
+2. What is the purpose of a hash? Why is this type of algorithm used in creating a MAC?
+
+[put answer here]
+
+3. One essential part of TLS is verifying certificates. Which part of network security (confidentiality, authentication, message integrity, and availability) do certificates address? Support your answer. 
+
+[put answer here]
+
+4. TLS is used alongside many other application layer protocols besides HTTP. List two other protocols that TLS is used with and why that level of encryption is necessary.
+
+[put answer here]
