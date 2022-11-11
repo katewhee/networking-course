@@ -47,7 +47,7 @@ All messages sent, including data messages, has a header. This lets the client a
 
 - **Type**: This field is 8 bits (or 1 byte) and describes the type of message. There are six different types: error (0x00), hello (0x01), certificate (0x02), encrypted nonce (0x03), hash (0x04), and data (0x05).
 
-- **Length**: The length of the data field in bytes. This field is 27 bits (or 3 bytes) long.
+- **Length**: The length of the data field in bytes. This field is 24 bits (or 3 bytes) long.
 
 - **Data**: This field is variable length. **Based on the type of message, you will interpret the data payload differently.**
 
