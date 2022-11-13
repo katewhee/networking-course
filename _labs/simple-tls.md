@@ -112,7 +112,7 @@ If you have made it this far, save the data to a file with an `.png` extension. 
 Your program must take one optional argument and four options. The only argument is the output file name. When your client connects to the server properly, the server will send you a file. You will save the data to the specified file name. If a user would like to write to `stdout`, a dash (`-`) can be used. You should be familiar with the four options and how they work.
 
 ```
-usage: client.py [-h] [-p PORT] [--host HOST] [-v] file
+usage: simple_tls_client.py [-h] [-p PORT] [--host HOST] [-v] file
 
 positional arguments:
   file                  The file name to save to. It must be a PNG file extension. Use - for
