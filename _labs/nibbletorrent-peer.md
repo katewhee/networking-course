@@ -18,7 +18,7 @@ Use the GitHub Classroom link posted in the Slack channel for the lab to accept 
 
 You will be implementing a simplified version of a BitTorrent peer, called NibbleTorrent. NibbleTorrent is a peer-to-peer protocol, just like BitTorrent, but without the [Bencoded data](https://en.wikipedia.org/wiki/Bencode) and simplified interactions between peers. You will be downloading files using the following procedure:
 
-1. Get a torrent file and parse it. You can download them here.
+1. Get a torrent file and parse it. You can download them _here_.
    
 2. Make a request to the tracker (listed in the torrent file) to get a list of peers that are seeding that file. I am providing the tracker. By making a request to the tracker, you are adding yourself as a peer for that torrent.
    
